@@ -53,16 +53,26 @@ export const COMPANY_INFO = {
     ta: "திங்கள் – சனி: காலை 9:00 – மாலை 7:00"
   },
 
-  // Brand Colors (Sampled from Logo)
+  // Brand Colors (Aligned with Official Palette)
   colors: {
-    brandGreen: "#0E2922",
-    brandEmerald: "#1C473A",
-    brandGold: "#C8943D",
-    brandIvory: "#FAF8F3",
-    brandCream: "#F3EFE6",
-    brandBorder: "#E2DDD2",
-    brandDark: "#0B201A",
-    neutralText: "#3D4744"
+    deepGreen: "#0B2B22",
+    darkGreen: "#102F26",
+    warmOffWhite: "#FAF8F2",
+    lightBeige: "#F1EBDD",
+    goldAccent: "#C99A42",
+    darkText: "#27312D",
+    secondaryText: "#58615B",
+    border: "#E4DED1",
+    white: "#FFFFFF",
+    // aliases
+    brandGreen: "#0B2B22",
+    brandEmerald: "#102F26",
+    brandGold: "#C99A42",
+    brandIvory: "#FAF8F2",
+    brandCream: "#F1EBDD",
+    brandBorder: "#E4DED1",
+    brandDark: "#0B2B22",
+    neutralText: "#58615B"
   },
 
   // Disclaimers and Notices

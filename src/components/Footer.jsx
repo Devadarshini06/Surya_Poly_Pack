@@ -22,8 +22,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0B201A] text-[#F3EFE6] pt-16 pb-10 border-t border-[#1C473A]/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+    <footer className="bg-[#0B2B22] text-[#FAF8F2] pt-16 pb-10 border-t border-[#102F26]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
         
         {/* Main 4-column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">

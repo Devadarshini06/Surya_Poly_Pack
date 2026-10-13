@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-green: #0E2922;
-  --color-brand-emerald: #1C473A;
-  --color-brand-emerald-light: #2D6151;
-  --color-brand-emerald-dark: #0A1E19;
-  --color-brand-gold: #C8943D;
-  --color-brand-gold-light: #DBB061;
-  --color-brand-gold-dark: #A67628;
-  --color-brand-charcoal: #0B201A;
-  --color-brand-ivory: #FAF8F3;
-  --color-brand-cream: #F3EFE6;
-  --color-brand-neutral: #3D4744;
-  --color-brand-muted: #5E6B66;
-  --color-brand-border: #E2DDD2;
+  --color-brand-green: #0B2B22;
+  --color-brand-emerald: #102F26;
+  --color-brand-emerald-light: #184236;
+  --color-brand-emerald-dark: #071E18;
+  --color-brand-gold: #C99A42;
+  --color-brand-gold-light: #DBAE56;
+  --color-brand-gold-dark: #A67B28;
+  --color-brand-charcoal: #0B2B22;
+  --color-brand-ivory: #FAF8F2;
+  --color-brand-cream: #F1EBDD;
+  --color-brand-neutral: #27312D;
+  --color-brand-muted: #58615B;
+  --color-brand-border: #E4DED1;
   --font-sans: 'Plus Jakarta Sans', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
   --font-heading: 'Outfit', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --brand-green: #0E2922;
-  --brand-emerald: #1C473A;
-  --brand-gold: #C8943D;
-  --brand-gold-light: #DBB061;
-  --brand-charcoal: #0B201A;
-  --brand-ivory: #FAF8F3;
-  --brand-cream: #F3EFE6;
-  --brand-neutral: #3D4744;
-  --brand-border: #E2DDD2;
+  --brand-green: #0B2B22;
+  --brand-emerald: #102F26;
+  --brand-gold: #C99A42;
+  --brand-gold-light: #DBAE56;
+  --brand-charcoal: #0B2B22;
+  --brand-ivory: #FAF8F2;
+  --brand-cream: #F1EBDD;
+  --brand-neutral: #27312D;
+  --brand-border: #E4DED1;
 }
 
 @layer base {
@@ -37,15 +37,15 @@
   }
   
   body {
-    background-color: #FAF8F3;
-    color: #0E2922;
+    background-color: #FAF8F2;
+    color: #27312D;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
-    color: #0E2922;
+    color: #0B2B22;
     letter-spacing: -0.015em;
   }
 }
@@ -57,7 +57,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F3EFE6;
+  background: #F1EBDD;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -66,7 +66,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C8943D;
+  background: #C99A42;
 }
 
 /* Utility Animations & Card Styling */
@@ -76,12 +76,12 @@
 
 .card-hover-effect:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px -10px rgba(14, 41, 34, 0.12);
-  border-color: #C8943D;
+  box-shadow: 0 14px 30px -10px rgba(11, 43, 34, 0.12);
+  border-color: #C99A42;
 }
 
 .glass-nav {
-  background-color: rgba(250, 248, 243, 0.94);
+  background-color: rgba(250, 248, 242, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }

@@ -37,18 +37,18 @@ export default function Header() {
   return (
     <>
       {/* Top Corporate Strip - Single Ultra-Clean Line */}
-      <div className="bg-[#0B201A] text-[#F3EFE6] text-xs py-2 px-4 sm:px-8 border-b border-[#1C473A]/40 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-nowrap whitespace-nowrap">
+      <div className="bg-[#0B2B22] text-[#FAF8F2] text-xs py-2 px-4 sm:px-8 border-b border-[#102F26]/60 overflow-hidden">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between gap-4 flex-nowrap whitespace-nowrap">
           
           {/* Left: Brand Subtitle & Location */}
           <div className="flex items-center gap-3 text-[11px] sm:text-xs shrink-0">
-            <span className="flex items-center gap-1.5 font-medium text-[#FAF8F3]">
-              <span className="w-2 h-2 rounded-full bg-[#C8943D] animate-pulse"></span>
+            <span className="flex items-center gap-1.5 font-medium text-[#FAF8F2]">
+              <span className="w-2 h-2 rounded-full bg-[#C99A42] animate-pulse"></span>
               <span>{t.brandSubtitle}</span>
             </span>
             <span className="hidden lg:inline text-white/20">|</span>
-            <span className="hidden lg:flex items-center gap-1 text-[#F3EFE6]/80">
-              <MapPin className="w-3.5 h-3.5 text-[#C8943D] shrink-0" />
+            <span className="hidden lg:flex items-center gap-1 text-[#FAF8F2]/80">
+              <MapPin className="w-3.5 h-3.5 text-[#C99A42] shrink-0" />
               <span>{lang === 'ta' ? 'சிவகாசி, தமிழ்நாடு' : 'Sivakasi, Tamil Nadu'}</span>
             </span>
           </div>
@@ -56,17 +56,17 @@ export default function Header() {
           {/* Right: Phone Numbers, Email & Language Switcher */}
           <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs shrink-0">
             <div className="flex items-center gap-1.5 font-medium">
-              <Phone className="w-3.5 h-3.5 text-[#C8943D] shrink-0" />
+              <Phone className="w-3.5 h-3.5 text-[#C99A42] shrink-0" />
               <a 
                 href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
-                className="text-[#F3EFE6] hover:text-[#DBB061] transition"
+                className="text-[#FAF8F2] hover:text-[#C99A42] transition"
               >
                 {COMPANY_INFO.phone.primary}
               </a>
               <span className="text-white/20 hidden sm:inline">/</span>
               <a 
                 href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
-                className="hidden sm:inline text-[#F3EFE6] hover:text-[#DBB061] transition"
+                className="hidden sm:inline text-[#FAF8F2] hover:text-[#C99A42] transition"
               >
                 {COMPANY_INFO.phone.secondary}
               </a>
@@ -76,9 +76,9 @@ export default function Header() {
 
             <a 
               href={`mailto:${COMPANY_INFO.email.sales}`}
-              className="hidden xl:flex items-center gap-1.5 text-[#F3EFE6] hover:text-[#DBB061] transition"
+              className="hidden xl:flex items-center gap-1.5 text-[#FAF8F2] hover:text-[#C99A42] transition"
             >
-              <Mail className="w-3.5 h-3.5 text-[#C8943D] shrink-0" />
+              <Mail className="w-3.5 h-3.5 text-[#C99A42] shrink-0" />
               <span>{COMPANY_INFO.email.sales}</span>
             </a>
 
@@ -94,15 +94,15 @@ export default function Header() {
       <header
         className={`sticky top-0 z-40 transition-all duration-200 ${
           scrolled
-            ? 'glass-nav border-b border-[#E2DDD2] shadow-xs py-2.5'
-            : 'bg-[#FAF8F3] border-b border-[#E2DDD2] py-3'
+            ? 'glass-nav border-b border-[#E4DED1] shadow-xs py-2.5'
+            : 'bg-[#FAF8F2] border-b border-[#E4DED1] py-3'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 flex items-center justify-between">
           {/* Official Company Logo */}
           <Link 
             to="/" 
-            className="flex items-center group focus:outline-hidden focus:ring-2 focus:ring-[#0E2922] rounded-xl p-1 transition-opacity hover:opacity-95"
+            className="flex items-center group focus:outline-hidden focus:ring-2 focus:ring-[#0B2B22] rounded-xl p-1 transition-opacity hover:opacity-95"
             aria-label="Surya Poly Pack Home"
           >
             <img
@@ -121,8 +121,8 @@ export default function Header() {
                 className={({ isActive }) =>
                   `px-2.5 xl:px-3.5 py-2 rounded-lg text-xs xl:text-sm font-semibold transition-colors duration-150 whitespace-nowrap flex items-center ${
                     isActive
-                      ? 'text-[#0E2922] bg-[#C8943D]/15 font-bold shadow-2xs'
-                      : 'text-[#3D4744] hover:text-[#0E2922] hover:bg-[#F3EFE6]'
+                      ? 'text-[#0B2B22] bg-[#F1EBDD] font-bold shadow-2xs'
+                      : 'text-[#27312D] hover:text-[#0B2B22] hover:bg-[#F1EBDD]/60'
                   }`
                 }
               >
@@ -135,10 +135,10 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-3.5 xl:px-5 py-2.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs xl:text-sm font-bold shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg active:scale-98 border border-[#C8943D]/30 whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-3.5 xl:px-5 py-2.5 rounded-xl bg-[#0B2B22] hover:bg-[#102F26] text-[#FAF8F2] text-xs xl:text-sm font-bold shadow-md shadow-[#0B2B22]/15 transition hover:shadow-lg active:scale-98 border border-[#C99A42]/30 whitespace-nowrap"
             >
               <span>{t.nav.getQuote}</span>
-              <ArrowRight className="w-4 h-4 text-[#C8943D] shrink-0" />
+              <ArrowRight className="w-4 h-4 text-[#C99A42] shrink-0" />
             </Link>
           </div>
 
@@ -148,7 +148,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-[#0E2922] hover:bg-[#F3EFE6] border border-[#E2DDD2] transition cursor-pointer"
+              className="p-2.5 rounded-xl text-[#0B2B22] hover:bg-[#F1EBDD] border border-[#E4DED1] transition cursor-pointer"
               aria-label={mobileMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
               aria-expanded={mobileMenuOpen}
             >
@@ -159,7 +159,7 @@ export default function Header() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-[#E2DDD2] bg-[#FAF8F3] shadow-xl px-4 py-5 animate-in slide-in-from-top-2 duration-150">
+          <div className="lg:hidden border-t border-[#E4DED1] bg-[#FAF8F2] shadow-xl px-4 py-5 animate-in slide-in-from-top-2 duration-150">
             <nav className="flex flex-col gap-1.5">
               {navLinks.map((item) => (
                 <NavLink
@@ -168,8 +168,8 @@ export default function Header() {
                   className={({ isActive }) =>
                     `px-4 py-3 rounded-xl text-base font-semibold transition flex items-center justify-between ${
                       isActive
-                        ? 'bg-[#0E2922] text-[#FAF8F3]'
-                        : 'text-[#0E2922] hover:bg-[#F3EFE6]'
+                        ? 'bg-[#0B2B22] text-[#FAF8F2]'
+                        : 'text-[#0B2B22] hover:bg-[#F1EBDD]'
                     }`
                   }
                 >
@@ -179,14 +179,14 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="mt-5 pt-4 border-t border-[#E2DDD2] flex flex-col gap-3">
+            <div className="mt-5 pt-4 border-t border-[#E4DED1] flex flex-col gap-3">
               <Link
                 to="/contact"
-                className="w-full text-center py-3 rounded-xl bg-[#0E2922] text-[#FAF8F3] font-bold text-sm shadow-md"
+                className="w-full text-center py-3 rounded-xl bg-[#0B2B22] text-[#FAF8F2] font-bold text-sm shadow-md border border-[#C99A42]/30"
               >
                 {t.nav.getQuote}
               </Link>
-              <div className="text-xs text-[#3D4744] text-center pt-1 font-medium space-y-1">
+              <div className="text-xs text-[#58615B] text-center pt-1 font-medium space-y-1">
                 <div>📞 {COMPANY_INFO.phone.primary} / {COMPANY_INFO.phone.secondary}</div>
                 <div>✉️ {COMPANY_INFO.email.sales}</div>
               </div>

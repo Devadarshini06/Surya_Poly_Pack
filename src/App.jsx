@@ -30,7 +30,7 @@ function ScrollToTop() {
 
 function MainLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF8F3] text-[#0E2922] font-sans antialiased selection:bg-[#C8943D] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FAF8F2] text-[#27312D] font-sans antialiased selection:bg-[#C99A42] selection:text-white">
       <ScrollToTop />
       
       {/* Sticky Top Header */}

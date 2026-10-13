@@ -12,7 +12,7 @@ export const en = {
     home: "Home",
     about: "About Us",
     products: "Products",
-    machinery: "Machinery & Manufacturing",
+    machinery: "Machinery",
     gallery: "Gallery",
     contact: "Contact Us",
     getQuote: "Get a Quote",
@@ -23,20 +23,21 @@ export const en = {
 
   // Hero Section
   hero: {
-    badge: "Flexible Packaging & Poly Manufacturing",
+    badge: "Flexible Packaging & Printing",
     headlineLine1: "Packaging That Protects.",
     headlineLine2: "Printing That Stands Out.",
     headline: "Packaging That Protects. Printing That Stands Out.",
-    description: "Your partner for quality printed packaging covers, flexible packaging solutions, and custom packaging products for food, retail, agriculture, and industrial applications.",
+    description: "Your trusted partner for high-quality printed packaging covers, flexible packaging solutions, and custom packaging products for food, retail, agriculture, and industrial applications.",
     btnExplore: "Explore Our Products",
     btnContact: "Contact Us",
     stat1: "Flexographic Printing",
-    stat1Sub: "Up to Multi-Colour",
-    stat2: "Material Range",
+    stat1Sub: "Multi-colour printing",
+    stat2: "Material Conversion",
     stat2Sub: "HM, HDPE, LDPE, LLDPE, PP",
-    stat3: "Conversion Capacity",
-    stat3Sub: "Bottom & Side Sealing",
-    badgeQuality: "Custom Engineered Packaging Solutions"
+    stat3: "Sealing & Cutting",
+    stat3Sub: "Bottom and side sealing",
+    badgeQuality: "Surya Poly Pack Manufacturing",
+    badgeQualitySub: "Custom Engineered Packaging Solutions"
   },
 
   // Company Intro (Home)
