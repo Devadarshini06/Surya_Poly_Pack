@@ -13,10 +13,10 @@ export const ta = {
     home: "முகப்பு",
     about: "எங்களைப் பற்றி",
     products: "தயாரிப்புகள்",
-    machinery: "இயந்திரங்கள் & உற்பத்தி",
+    machinery: "இயந்திரங்கள்",
     gallery: "புகைப்படங்கள்",
     contact: "தொடர்புக்கு",
-    getQuote: "விலைக் குறிப்பு பெற",
+    getQuote: "விலைக் குறிப்பு",
     switchLanguage: "மொழி",
     openMenu: "பட்டியலைத் திற",
     closeMenu: "பட்டியலை மூடு"

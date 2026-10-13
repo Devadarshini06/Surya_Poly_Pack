@@ -113,13 +113,13 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
             {navLinks.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors duration-150 ${
+                  `px-2.5 xl:px-3.5 py-2 rounded-lg text-xs xl:text-sm font-semibold transition-colors duration-150 whitespace-nowrap flex items-center ${
                     isActive
                       ? 'text-[#0E2922] bg-[#C8943D]/15 font-bold shadow-2xs'
                       : 'text-[#3D4744] hover:text-[#0E2922] hover:bg-[#F3EFE6]'
@@ -132,13 +132,13 @@ export default function Header() {
           </nav>
 
           {/* Right Action Desktop */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-sm font-bold shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg active:scale-98 border border-[#C8943D]/30"
+              className="inline-flex items-center gap-2 px-3.5 xl:px-5 py-2.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs xl:text-sm font-bold shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg active:scale-98 border border-[#C8943D]/30 whitespace-nowrap"
             >
               <span>{t.nav.getQuote}</span>
-              <ArrowRight className="w-4 h-4 text-[#C8943D]" />
+              <ArrowRight className="w-4 h-4 text-[#C8943D] shrink-0" />
             </Link>
           </div>
 

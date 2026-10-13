@@ -11,7 +11,7 @@ export default function SectionHeading({
   return (
     <div className={`space-y-3 ${centered ? 'text-center max-w-2xl mx-auto' : 'max-w-2xl'} ${className}`}>
       {badge && (
-        <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+        <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold ${
           light 
             ? 'bg-white/10 text-white border border-white/20' 
             : 'bg-[#0E2922]/10 text-[#0E2922] border border-[#0E2922]/20'
@@ -22,7 +22,7 @@ export default function SectionHeading({
       )}
       
       {title && (
-        <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight font-['Outfit',sans-serif] ${
+        <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-snug font-['Outfit',sans-serif] ${
           light ? 'text-white' : 'text-[#0E2922]'
         }`}>
           {title}

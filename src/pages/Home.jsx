@@ -102,12 +102,12 @@ export default function Home() {
             {/* Left Column: Headline & Content */}
             <div className="lg:col-span-7 space-y-6">
               
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0E2922]/10 border border-[#0E2922]/20 text-[#0E2922] text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0E2922]/10 border border-[#0E2922]/20 text-[#0E2922] text-xs font-bold">
                 <span className="w-2 h-2 rounded-full bg-[#C8943D] animate-pulse"></span>
                 <span>{t.hero.badge}</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-5xl/tight font-extrabold text-[#0E2922] font-['Outfit',sans-serif] tracking-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-[#0E2922] font-['Outfit',sans-serif] leading-tight sm:leading-snug">
                 {t.hero.headline}
               </h1>
 
@@ -134,18 +134,18 @@ export default function Home() {
               </div>
 
               {/* Quick Spec Highlights */}
-              <div className="pt-6 border-t border-[#E2DDD2] grid grid-cols-3 gap-4">
-                <div>
-                  <div className="text-xs font-bold text-[#C8943D]">{t.hero.stat1}</div>
-                  <div className="text-xs text-[#3D4744] mt-0.5">{t.hero.stat1Sub}</div>
+              <div className="pt-6 border-t border-[#E2DDD2] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-[#C8943D] break-words">{t.hero.stat1}</div>
+                  <div className="text-xs text-[#3D4744] mt-0.5 leading-relaxed">{t.hero.stat1Sub}</div>
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-[#C8943D]">{t.hero.stat2}</div>
-                  <div className="text-xs text-[#3D4744] mt-0.5">{t.hero.stat2Sub}</div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-[#C8943D] break-words">{t.hero.stat2}</div>
+                  <div className="text-xs text-[#3D4744] mt-0.5 leading-relaxed">{t.hero.stat2Sub}</div>
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-[#C8943D]">{t.hero.stat3}</div>
-                  <div className="text-xs text-[#3D4744] mt-0.5">{t.hero.stat3Sub}</div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-[#C8943D] break-words">{t.hero.stat3}</div>
+                  <div className="text-xs text-[#3D4744] mt-0.5 leading-relaxed">{t.hero.stat3Sub}</div>
                 </div>
               </div>
 
@@ -291,10 +291,10 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 space-y-2">
-                  <h3 className="text-lg font-extrabold text-[#0E2922] font-['Outfit',sans-serif]">
+                  <h3 className="text-lg font-extrabold text-[#0E2922] font-['Outfit',sans-serif] min-h-[3rem] flex items-center leading-snug">
                     {cat.title}
                   </h3>
-                  <p className="text-xs text-[#3D4744] leading-relaxed">
+                  <p className="text-xs text-[#3D4744] leading-relaxed line-clamp-2 min-h-[2.5rem]">
                     {cat.desc}
                   </p>
                 </div>

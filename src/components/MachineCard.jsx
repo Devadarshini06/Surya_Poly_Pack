@@ -39,7 +39,7 @@ export default function MachineCard({ machine }) {
             <div className="text-[11px] uppercase tracking-wider font-bold text-[#C8943D] mb-1">
               {machine.shortName}
             </div>
-            <h3 className="font-extrabold text-xl text-[#0E2922] font-['Outfit',sans-serif]">
+            <h3 className="font-extrabold text-lg sm:text-xl text-[#0E2922] font-['Outfit',sans-serif] min-h-[3.25rem] flex items-center leading-normal">
               {name}
             </h3>
           </div>

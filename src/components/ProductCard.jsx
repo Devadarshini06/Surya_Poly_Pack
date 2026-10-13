@@ -53,20 +53,20 @@ export default function ProductCard({ product }) {
           {/* Card Body */}
           <div className="p-5 space-y-3">
             <div>
-              <h3 className="font-extrabold text-lg text-[#0E2922] font-['Outfit',sans-serif] leading-snug">
+              <h3 className="font-extrabold text-base sm:text-lg text-[#0E2922] font-['Outfit',sans-serif] leading-normal min-h-[3.25rem] flex items-center">
                 {name}
               </h3>
-              <p className="text-xs text-[#3D4744] leading-relaxed mt-1 line-clamp-2">
+              <p className="text-xs text-[#3D4744] leading-relaxed mt-1 line-clamp-2 min-h-[2.5rem]">
                 {description}
               </p>
             </div>
 
             {/* Application Meta */}
-            <div className="pt-2 border-t border-[#F3EFE6] space-y-1.5 text-xs">
+            <div className="pt-2 border-t border-[#F3EFE6] space-y-1 text-xs">
               <div className="text-[11px] font-bold text-[#C8943D] uppercase tracking-wider">
                 {t.productsPage.typicalApp}
               </div>
-              <p className="text-[#3D4744] text-xs line-clamp-2">
+              <p className="text-[#3D4744] text-xs line-clamp-2 min-h-[2.25rem]">
                 {application}
               </p>
             </div>

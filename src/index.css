@@ -85,3 +85,50 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+
+/* Dedicated Tamil Typography & Alignment Normalization */
+html[lang="ta"] {
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: normal;
+}
+
+html[lang="ta"] body {
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  letter-spacing: normal;
+}
+
+html[lang="ta"] h1,
+html[lang="ta"] h2,
+html[lang="ta"] h3,
+html[lang="ta"] h4,
+html[lang="ta"] h5,
+html[lang="ta"] h6 {
+  font-family: 'Noto Sans Tamil', 'Outfit', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0 !important;
+  line-height: 1.42;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Remove tight tracking that separates or squashes Tamil vowel diacritics */
+html[lang="ta"] .tracking-tight,
+html[lang="ta"] .tracking-tighter,
+html[lang="ta"] .tracking-wide,
+html[lang="ta"] .tracking-wider,
+html[lang="ta"] .tracking-widest {
+  letter-spacing: 0 !important;
+}
+
+/* Vertical optical baseline adjustments for Tamil text inside flex containers & buttons */
+html[lang="ta"] .inline-flex,
+html[lang="ta"] .flex {
+  align-items: center;
+}
+
+html[lang="ta"] .line-clamp-1,
+html[lang="ta"] .line-clamp-2,
+html[lang="ta"] .line-clamp-3 {
+  line-height: 1.65;
+}
+
