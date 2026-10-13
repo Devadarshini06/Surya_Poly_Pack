@@ -60,19 +60,31 @@ export default function Contact() {
                   <div className="w-10 h-10 rounded-xl bg-[#5B2A86]/10 text-[#5B2A86] flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="space-y-1">
                     <div className="text-xs font-bold uppercase tracking-wider text-[#45414A]">
                       {t.contactPage.phoneLabel}
                     </div>
-                    <a 
-                      href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
-                      className="font-bold text-base text-[#231F20] hover:text-[#5B2A86] transition block mt-0.5"
-                    >
-                      {COMPANY_INFO.phone.primary}
-                    </a>
-                    <span className="text-xs text-[#5B2A86] font-semibold">
-                      {lang === 'ta' ? 'அழைப்பு & வாட்ஸ்அப்' : 'Direct Call & WhatsApp'}
-                    </span>
+                    <div className="space-y-1.5 pt-0.5">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <a 
+                          href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
+                          className="font-bold text-base text-[#231F20] hover:text-[#5B2A86] transition"
+                        >
+                          {COMPANY_INFO.phone.primary}
+                        </a>
+                        <span className="text-[11px] px-2 py-0.5 rounded-md bg-[#25D366]/15 text-[#25D366] font-bold">
+                          WhatsApp
+                        </span>
+                      </div>
+                      <div>
+                        <a 
+                          href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
+                          className="font-bold text-base text-[#231F20] hover:text-[#5B2A86] transition block"
+                        >
+                          {COMPANY_INFO.phone.secondary}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

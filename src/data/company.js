@@ -25,8 +25,8 @@ export const COMPANY_INFO = {
   phone: {
     primary: "+91 97866 78966",
     primaryRaw: "919786678966",
-    secondary: "+91 97866 78966",
-    secondaryRaw: "919786678966",
+    secondary: "+91 99434 66006",
+    secondaryRaw: "919943466006",
     isPlaceholder: false
   },
   whatsapp: {

@@ -123,9 +123,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#8E5FD8] shrink-0" />
-                <a href={`tel:${COMPANY_INFO.phone.primaryRaw}`} className="hover:text-white transition">
-                  {COMPANY_INFO.phone.primary}
-                </a>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <a href={`tel:${COMPANY_INFO.phone.primaryRaw}`} className="hover:text-white transition">
+                    {COMPANY_INFO.phone.primary}
+                  </a>
+                  <span className="text-white/40">/</span>
+                  <a href={`tel:${COMPANY_INFO.phone.secondaryRaw}`} className="hover:text-white transition">
+                    {COMPANY_INFO.phone.secondary}
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#8E5FD8] shrink-0" />

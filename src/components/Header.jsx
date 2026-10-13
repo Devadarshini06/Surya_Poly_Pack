@@ -50,13 +50,20 @@ export default function Header() {
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px] sm:text-xs">
+          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs">
             <a 
               href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
               className="flex items-center gap-1.5 text-[#F2F0F4] hover:text-[#8E5FD8] transition"
             >
               <Phone className="w-3.5 h-3.5 text-[#8E5FD8]" />
               <span>{COMPANY_INFO.phone.primary}</span>
+            </a>
+            <span className="text-white/30 hidden md:inline">/</span>
+            <a 
+              href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
+              className="hidden md:flex items-center gap-1.5 text-[#F2F0F4] hover:text-[#8E5FD8] transition"
+            >
+              <span>{COMPANY_INFO.phone.secondary}</span>
             </a>
             <span className="hidden sm:inline text-white/30">|</span>
             <a 
@@ -169,8 +176,9 @@ export default function Header() {
               >
                 {t.nav.getQuote}
               </Link>
-              <div className="text-xs text-[#45414A] text-center pt-1 font-medium">
-                📞 {COMPANY_INFO.phone.primary} | ✉️ {COMPANY_INFO.email.sales}
+              <div className="text-xs text-[#45414A] text-center pt-1 font-medium space-y-1">
+                <div>📞 {COMPANY_INFO.phone.primary} / {COMPANY_INFO.phone.secondary}</div>
+                <div>✉️ {COMPANY_INFO.email.sales}</div>
               </div>
             </div>
           </div>
