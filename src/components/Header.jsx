@@ -37,8 +37,8 @@ export default function Header() {
   return (
     <>
       {/* Top Corporate Strip - Single Ultra-Clean Line */}
-      <div className="bg-[#0B2B22] text-[#FAF8F2] text-xs py-2 px-4 sm:px-8 border-b border-[#102F26]/60 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between gap-4 flex-nowrap whitespace-nowrap">
+      <div className="w-full bg-[#0B2B22] text-[#FAF8F2] text-xs py-2 border-b border-[#102F26]/60 overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 flex items-center justify-between gap-4 flex-nowrap whitespace-nowrap">
           
           {/* Left: Brand Subtitle & Location */}
           <div className="flex items-center gap-3 text-[11px] sm:text-xs shrink-0">
@@ -92,7 +92,7 @@ export default function Header() {
 
       {/* Main Sticky Header */}
       <header
-        className={`sticky top-0 z-40 transition-all duration-200 ${
+        className={`sticky top-0 z-40 transition-all duration-200 w-full ${
           scrolled
             ? 'glass-nav border-b border-[#E4DED1] shadow-xs py-2.5'
             : 'bg-[#FAF8F2] border-b border-[#E4DED1] py-3'
@@ -102,7 +102,7 @@ export default function Header() {
           {/* Official Company Logo */}
           <Link 
             to="/" 
-            className="flex items-center group focus:outline-hidden focus:ring-2 focus:ring-[#0B2B22] rounded-xl p-1 transition-opacity hover:opacity-95"
+            className="flex items-center group focus:outline-hidden focus:ring-2 focus:ring-[#0B2B22] rounded-xl transition-opacity hover:opacity-95"
             aria-label="Surya Poly Pack Home"
           >
             <img

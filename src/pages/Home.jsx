@@ -135,18 +135,18 @@ export default function Home() {
               </div>
 
               {/* Quick Spec Highlights */}
-              <div className="pt-6 sm:pt-7 border-t border-[#E4DED1] grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+              <div className="pt-6 sm:pt-7 border-t border-[#E4DED1] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                 <div className="min-w-0">
-                  <div className="hero-spec-item text-xs sm:text-sm font-bold text-[#C99A42] leading-tight sm:whitespace-nowrap">{t.hero.stat1}</div>
-                  <div className="hero-spec-item text-xs text-[#58615B] mt-1 sm:mt-1.5 leading-snug sm:whitespace-nowrap">{t.hero.stat1Sub}</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#C99A42] leading-snug">{t.hero.stat1}</div>
+                  <div className="text-xs text-[#58615B] mt-0.5 sm:mt-1 leading-snug">{t.hero.stat1Sub}</div>
                 </div>
                 <div className="min-w-0">
-                  <div className="hero-spec-item text-xs sm:text-sm font-bold text-[#C99A42] leading-tight sm:whitespace-nowrap">{t.hero.stat2}</div>
-                  <div className="hero-spec-item text-xs text-[#58615B] mt-1 sm:mt-1.5 leading-snug sm:whitespace-nowrap">{t.hero.stat2Sub}</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#C99A42] leading-snug">{t.hero.stat2}</div>
+                  <div className="text-xs text-[#58615B] mt-0.5 sm:mt-1 leading-snug">{t.hero.stat2Sub}</div>
                 </div>
                 <div className="min-w-0">
-                  <div className="hero-spec-item text-xs sm:text-sm font-bold text-[#C99A42] leading-tight sm:whitespace-nowrap">{t.hero.stat3}</div>
-                  <div className="hero-spec-item text-xs text-[#58615B] mt-1 sm:mt-1.5 leading-snug sm:whitespace-nowrap">{t.hero.stat3Sub}</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#C99A42] leading-snug">{t.hero.stat3}</div>
+                  <div className="text-xs text-[#58615B] mt-0.5 sm:mt-1 leading-snug">{t.hero.stat3Sub}</div>
                 </div>
               </div>
 
