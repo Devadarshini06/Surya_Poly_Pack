@@ -4,9 +4,9 @@ import {
   Phone, 
   Mail, 
   MapPin, 
-  Clock, 
-  MessageCircle
+  Clock 
 } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY_INFO, getWhatsAppUrl } from '../data/company';
 import { PRODUCTS } from '../data/products';
@@ -72,7 +72,8 @@ export default function Contact() {
                         >
                           {COMPANY_INFO.phone.primary}
                         </a>
-                        <span className="text-[11px] px-2 py-0.5 rounded-md bg-[#25D366]/15 text-[#25D366] font-bold">
+                        <span className="text-[11px] px-2 py-0.5 rounded-md bg-[#25D366]/15 text-[#25D366] font-bold inline-flex items-center gap-1">
+                          <WhatsAppIcon className="w-3 h-3 text-[#25D366]" />
                           WhatsApp
                         </span>
                       </div>
@@ -146,7 +147,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-sm shadow-md transition"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <WhatsAppIcon className="w-5 h-5 text-white fill-white" />
                   <span>{t.contactPage.whatsappBtn}</span>
                 </a>
               </div>

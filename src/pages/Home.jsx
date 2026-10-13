@@ -9,10 +9,10 @@ import {
   Settings2, 
   Sliders, 
   CheckCircle2, 
-  MessageCircle, 
   ChevronRight,
   Factory
 } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { MACHINES } from '../data/machines';
 import { getWhatsAppUrl } from '../data/company';
@@ -478,7 +478,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md hover:bg-[#20ba59] transition active:scale-98"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-white fill-white" />
                 <span>{t.cta.btnWhatsapp}</span>
               </a>
             </div>

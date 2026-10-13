@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Send, CheckCircle2, AlertCircle, RefreshCw, MessageSquare } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, RefreshCw } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { PRODUCTS } from '../data/products';
 import { getWhatsAppUrl } from '../data/company';
@@ -183,7 +184,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-md hover:bg-[#20ba59] transition"
             >
-              <MessageSquare className="w-3.5 h-3.5" />
+              <WhatsAppIcon className="w-3.5 h-3.5 text-white fill-white" />
               <span>WhatsApp Direct</span>
             </a>
           </div>

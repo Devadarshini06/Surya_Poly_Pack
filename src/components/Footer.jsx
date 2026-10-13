@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, MessageCircle, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY_INFO, getWhatsAppUrl } from '../data/company';
 
@@ -50,7 +51,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 text-xs font-semibold transition border border-[#25D366]/30"
               >
-                <MessageCircle className="w-3.5 h-3.5" />
+                <WhatsAppIcon className="w-3.5 h-3.5" />
                 <span>WhatsApp Enquiry</span>
               </a>
             </div>
