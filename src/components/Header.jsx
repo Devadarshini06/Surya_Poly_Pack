@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, ArrowRight, Layers } from 'lucide-react';
+import { Menu, X, Phone, Mail, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY_INFO } from '../data/company';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -77,24 +77,22 @@ export default function Header() {
       <header
         className={`sticky top-0 z-40 transition-all duration-200 ${
           scrolled
-            ? 'glass-nav border-b border-[#E5E0EA] shadow-xs py-3'
-            : 'bg-[#FAF9F6] border-b border-[#E5E0EA] py-3.5'
+            ? 'glass-nav border-b border-[#E5E0EA] shadow-xs py-2.5'
+            : 'bg-[#FAF9F6] border-b border-[#E5E0EA] py-3'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group focus:outline-hidden focus:ring-2 focus:ring-[#6F42C1] rounded-lg p-1">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#5B2A86] to-[#6F42C1] flex items-center justify-center text-white shadow-md shadow-[#5B2A86]/20 group-hover:scale-105 transition-transform">
-              <Layers className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <div className="font-extrabold text-xl sm:text-2xl tracking-tight text-[#231F20] font-['Outfit',sans-serif] leading-tight">
-                SURYA <span className="text-[#5B2A86]">POLY PACK</span>
-              </div>
-              <div className="text-[10px] uppercase tracking-wider font-semibold text-[#45414A]">
-                Flexible Packaging & Poly Manufacturing
-              </div>
-            </div>
+          {/* Official Company Logo */}
+          <Link 
+            to="/" 
+            className="flex items-center group focus:outline-hidden focus:ring-2 focus:ring-[#5B2A86] rounded-xl p-1 transition-opacity hover:opacity-95"
+            aria-label="Surya Poly Pack Home"
+          >
+            <img
+              src={COMPANY_INFO.logo}
+              alt="Surya Poly Pack Logo"
+              className="h-11 sm:h-13 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}

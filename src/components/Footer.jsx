@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Layers, Phone, Mail, MapPin, MessageCircle, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, ArrowUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY_INFO, getWhatsAppUrl } from '../data/company';
 
@@ -29,17 +29,13 @@ export default function Footer() {
           
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#5B2A86] to-[#6F42C1] flex items-center justify-center text-white shadow-md">
-                <Layers className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <div className="font-extrabold text-xl tracking-tight text-white font-['Outfit',sans-serif]">
-                  SURYA <span className="text-[#8E5FD8]">POLY PACK</span>
-                </div>
-                <div className="text-[10px] uppercase tracking-wider text-[#F2F0F4]/60">
-                  {t.brandSubtitle}
-                </div>
+            <Link to="/" className="inline-block group focus:outline-hidden">
+              <div className="bg-[#FAF9F6] px-3.5 py-2.5 rounded-2xl inline-block shadow-md transition-transform group-hover:scale-[1.02]">
+                <img
+                  src={COMPANY_INFO.logo}
+                  alt="Surya Poly Pack Logo"
+                  className="h-10 sm:h-12 w-auto object-contain"
+                />
               </div>
             </Link>
 

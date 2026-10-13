@@ -8,9 +8,13 @@ export const COMPANY_INFO = {
   name: "Surya Poly Pack",
   shortName: "Surya Poly",
   legalEntity: "Surya Poly Pack Manufacturing",
+  logo: "/images/logo.png",
+  logoTransparent: "/images/logo-trans.png",
+  logoIcon: "/images/logo-icon.png",
+  logoIconTransparent: "/images/logo-icon-trans.png",
   tagline: {
-    en: "Packaging That Protects. Printing That Stands Out.",
-    ta: "தரமான பேக்கேஜிங். தனித்துவமான அச்சிடுதல்."
+    en: "Quality Packaging | A Brighter Tomorrow",
+    ta: "தரமான பேக்கேஜிங் | ஒளிமயமான எதிர்காலம்"
   },
   subTagline: {
     en: "Leading manufacturer of printed packaging covers, flexible packaging products, pouches, and poly conversion solutions.",
