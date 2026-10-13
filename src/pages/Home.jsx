@@ -100,7 +100,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Column: Headline & Content */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 sm:space-y-7">
               
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0E2922]/10 border border-[#0E2922]/20 text-[#0E2922] text-xs font-bold">
                 <span className="w-2 h-2 rounded-full bg-[#C8943D] animate-pulse"></span>
@@ -124,7 +124,7 @@ export default function Home() {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   to="/products"
-                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] font-bold text-sm shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg active:scale-98 border border-[#C8943D]/30 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] font-bold text-sm shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg active:scale-98 border border-[#C8943D]/30 whitespace-nowrap"
                 >
                   <span>{t.hero.btnExplore}</span>
                   <ArrowRight className="w-4 h-4 text-[#C8943D] shrink-0" />
@@ -132,25 +132,25 @@ export default function Home() {
 
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-white hover:bg-[#F3EFE6] text-[#0E2922] border border-[#E2DDD2] font-bold text-sm shadow-xs transition hover:border-[#0E2922]/40 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-white hover:bg-[#F3EFE6] text-[#0E2922] border border-[#E2DDD2] font-bold text-sm shadow-xs transition hover:border-[#0E2922]/40 whitespace-nowrap"
                 >
                   <span>{t.hero.btnContact}</span>
                 </Link>
               </div>
 
               {/* Quick Spec Highlights */}
-              <div className="pt-6 border-t border-[#E2DDD2] grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+              <div className="pt-6 sm:pt-7 border-t border-[#E2DDD2] grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
                 <div className="min-w-0">
                   <div className="hero-spec-item text-[11px] sm:text-xs font-bold text-[#C8943D] leading-tight sm:whitespace-nowrap">{t.hero.stat1}</div>
-                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1 leading-snug sm:whitespace-nowrap">{t.hero.stat1Sub}</div>
+                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1.5 leading-snug sm:whitespace-nowrap">{t.hero.stat1Sub}</div>
                 </div>
                 <div className="min-w-0">
                   <div className="hero-spec-item text-[11px] sm:text-xs font-bold text-[#C8943D] leading-tight sm:whitespace-nowrap">{t.hero.stat2}</div>
-                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1 leading-snug sm:whitespace-nowrap">{t.hero.stat2Sub}</div>
+                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1.5 leading-snug sm:whitespace-nowrap">{t.hero.stat2Sub}</div>
                 </div>
                 <div className="min-w-0">
                   <div className="hero-spec-item text-[11px] sm:text-xs font-bold text-[#C8943D] leading-tight sm:whitespace-nowrap">{t.hero.stat3}</div>
-                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1 leading-snug sm:whitespace-nowrap">{t.hero.stat3Sub}</div>
+                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1.5 leading-snug sm:whitespace-nowrap">{t.hero.stat3Sub}</div>
                 </div>
               </div>
 
@@ -393,7 +393,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-5 space-y-3">
-                  <h3 className="text-base font-extrabold text-[#0E2922] font-['Outfit',sans-serif]">
+                  <h3 className="text-base font-extrabold text-[#0E2922] font-['Outfit',sans-serif] min-h-[2.75rem] flex items-center">
                     {machine.name[lang] || machine.name.en}
                   </h3>
 
