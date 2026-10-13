@@ -24,6 +24,8 @@ export const en = {
   // Hero Section
   hero: {
     badge: "Flexible Packaging & Poly Manufacturing",
+    headlineLine1: "Packaging That Protects.",
+    headlineLine2: "Printing That Stands Out.",
     headline: "Packaging That Protects. Printing That Stands Out.",
     description: "Your partner for quality printed packaging covers, flexible packaging solutions, and custom packaging products for food, retail, agriculture, and industrial applications.",
     btnExplore: "Explore Our Products",

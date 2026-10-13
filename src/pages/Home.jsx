@@ -107,8 +107,9 @@ export default function Home() {
                 <span>{t.hero.badge}</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-[#0E2922] font-['Outfit',sans-serif] leading-tight sm:leading-snug">
-                {t.hero.headline}
+              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-[#0E2922] font-['Outfit',sans-serif] leading-[1.25] sm:leading-[1.22]">
+                <span className="block">{t.hero.headlineLine1 || "Packaging That Protects."}</span>
+                <span className="block mt-1 sm:mt-1.5">{t.hero.headlineLine2 || "Printing That Stands Out."}</span>
               </h1>
 
               <p className="text-base sm:text-lg text-[#3D4744] leading-relaxed max-w-2xl font-normal">
@@ -134,18 +135,18 @@ export default function Home() {
               </div>
 
               {/* Quick Spec Highlights */}
-              <div className="pt-6 border-t border-[#E2DDD2] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-[#C8943D] break-words">{t.hero.stat1}</div>
-                  <div className="text-xs text-[#3D4744] mt-0.5 leading-relaxed">{t.hero.stat1Sub}</div>
+              <div className="pt-6 border-t border-[#E2DDD2] grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+                <div>
+                  <div className="text-xs font-bold text-[#C8943D] leading-tight">{t.hero.stat1}</div>
+                  <div className="text-xs text-[#3D4744] mt-1 leading-snug">{t.hero.stat1Sub}</div>
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-[#C8943D] break-words">{t.hero.stat2}</div>
-                  <div className="text-xs text-[#3D4744] mt-0.5 leading-relaxed">{t.hero.stat2Sub}</div>
+                <div>
+                  <div className="text-xs font-bold text-[#C8943D] leading-tight">{t.hero.stat2}</div>
+                  <div className="text-xs text-[#3D4744] mt-1 leading-snug">{t.hero.stat2Sub}</div>
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-[#C8943D] break-words">{t.hero.stat3}</div>
-                  <div className="text-xs text-[#3D4744] mt-0.5 leading-relaxed">{t.hero.stat3Sub}</div>
+                <div>
+                  <div className="text-xs font-bold text-[#C8943D] leading-tight">{t.hero.stat3}</div>
+                  <div className="text-xs text-[#3D4744] mt-1 leading-snug">{t.hero.stat3Sub}</div>
                 </div>
               </div>
 
@@ -185,7 +186,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-7 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0E2922]/10 text-[#0E2922] text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0E2922]/10 text-[#0E2922] text-xs font-bold">
                 <span>{t.intro.badge}</span>
               </div>
 
