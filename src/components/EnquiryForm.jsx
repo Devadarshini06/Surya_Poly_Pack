@@ -109,59 +109,59 @@ export default function EnquiryForm({ initialProductId = '' }) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-[#E5E0EA] p-6 sm:p-10 shadow-lg shadow-[#5B2A86]/5">
+    <div className="bg-white rounded-3xl border border-[#E2DDD2] p-6 sm:p-10 shadow-lg shadow-[#0E2922]/5">
       {/* Form Header */}
       <div className="space-y-2 mb-8">
-        <h3 className="text-2xl font-extrabold text-[#231F20] font-['Outfit',sans-serif]">
+        <h3 className="text-2xl font-extrabold text-[#0E2922] font-['Outfit',sans-serif]">
           {t.contactPage.formHeading}
         </h3>
-        <p className="text-sm text-[#45414A]">
+        <p className="text-sm text-[#3D4744]">
           {t.contactPage.formSubheading}
         </p>
       </div>
 
       {/* Frontend Demo Banner */}
-      <div className="mb-6 p-3.5 rounded-xl bg-[#F2F0F4] border border-[#E5E0EA] text-xs text-[#45414A] flex items-start gap-2.5">
-        <AlertCircle className="w-4 h-4 text-[#5B2A86] shrink-0 mt-0.5" />
+      <div className="mb-6 p-3.5 rounded-xl bg-[#F3EFE6] border border-[#E2DDD2] text-xs text-[#3D4744] flex items-start gap-2.5">
+        <AlertCircle className="w-4 h-4 text-[#C8943D] shrink-0 mt-0.5" />
         <span>{t.contactPage.demoNotice}</span>
       </div>
 
       {isSuccess ? (
         <div className="py-8 space-y-6 text-center animate-in zoom-in-95 duration-200">
-          <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
+          <div className="w-16 h-16 rounded-full bg-[#1C473A]/15 text-[#1C473A] flex items-center justify-center mx-auto shadow-md">
             <CheckCircle2 className="w-8 h-8" />
           </div>
 
           <div className="space-y-2 max-w-md mx-auto">
-            <h4 className="text-2xl font-extrabold text-[#231F20] font-['Outfit',sans-serif]">
+            <h4 className="text-2xl font-extrabold text-[#0E2922] font-['Outfit',sans-serif]">
               {t.contactPage.successTitle}
             </h4>
-            <p className="text-sm text-[#45414A] leading-relaxed">
+            <p className="text-sm text-[#3D4744] leading-relaxed">
               {t.contactPage.successMessage}
             </p>
           </div>
 
           {/* Demonstration Record Summary */}
           {submittedData && (
-            <div className="max-w-md mx-auto bg-[#FAF9F6] border border-[#E5E0EA] rounded-2xl p-5 text-left text-xs space-y-2.5">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-[#5B2A86] border-b border-[#E5E0EA] pb-1">
+            <div className="max-w-md mx-auto bg-[#FAF8F3] border border-[#E2DDD2] rounded-2xl p-5 text-left text-xs space-y-2.5">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[#C8943D] border-b border-[#E2DDD2] pb-1">
                 {lang === 'ta' ? 'பதிவு செய்யப்பட்ட மாதிரி விவரங்கள்' : 'Demonstration Record Summary'}
               </div>
-              <div className="grid grid-cols-2 gap-2 text-[#45414A]">
-                <div><span className="font-semibold text-[#231F20]">Name:</span> {submittedData.fullName}</div>
-                <div><span className="font-semibold text-[#231F20]">Phone:</span> {submittedData.phone}</div>
+              <div className="grid grid-cols-2 gap-2 text-[#3D4744]">
+                <div><span className="font-semibold text-[#0E2922]">Name:</span> {submittedData.fullName}</div>
+                <div><span className="font-semibold text-[#0E2922]">Phone:</span> {submittedData.phone}</div>
                 {submittedData.companyName && (
-                  <div><span className="font-semibold text-[#231F20]">Company:</span> {submittedData.companyName}</div>
+                  <div><span className="font-semibold text-[#0E2922]">Company:</span> {submittedData.companyName}</div>
                 )}
                 {submittedData.email && (
-                  <div><span className="font-semibold text-[#231F20]">Email:</span> {submittedData.email}</div>
+                  <div><span className="font-semibold text-[#0E2922]">Email:</span> {submittedData.email}</div>
                 )}
                 <div className="col-span-2">
-                  <span className="font-semibold text-[#231F20]">Product:</span> {submittedData.product}
+                  <span className="font-semibold text-[#0E2922]">Product:</span> {submittedData.product}
                 </div>
                 {submittedData.quantity && (
                   <div className="col-span-2">
-                    <span className="font-semibold text-[#231F20]">Quantity:</span> {submittedData.quantity}
+                    <span className="font-semibold text-[#0E2922]">Quantity:</span> {submittedData.quantity}
                   </div>
                 )}
               </div>
@@ -172,7 +172,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#5B2A86] text-white text-xs font-bold shadow-md hover:bg-[#471F6B] transition"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0E2922] text-[#FAF8F3] text-xs font-bold shadow-md hover:bg-[#1C473A] transition cursor-pointer border border-[#C8943D]/30"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>{t.contactPage.btnDismiss}</span>
@@ -193,7 +193,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Full Name */}
             <div>
-              <label htmlFor="fullName" className="block text-xs font-bold text-[#231F20] mb-1.5">
+              <label htmlFor="fullName" className="block text-xs font-bold text-[#0E2922] mb-1.5">
                 {t.contactPage.fields.fullName} <span className="text-red-500">*</span>
               </label>
               <input
@@ -206,7 +206,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
                 className={`w-full px-4 py-2.5 rounded-xl border text-sm transition focus:outline-hidden focus:ring-2 ${
                   errors.fullName 
                     ? 'border-red-500 focus:ring-red-300' 
-                    : 'border-[#E5E0EA] focus:border-[#5B2A86] focus:ring-[#5B2A86]/20'
+                    : 'border-[#E2DDD2] focus:border-[#0E2922] focus:ring-[#C8943D]/25'
                 }`}
               />
               {errors.fullName && (
@@ -216,7 +216,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
 
             {/* Company Name */}
             <div>
-              <label htmlFor="companyName" className="block text-xs font-bold text-[#231F20] mb-1.5">
+              <label htmlFor="companyName" className="block text-xs font-bold text-[#0E2922] mb-1.5">
                 {t.contactPage.fields.companyName}
               </label>
               <input
@@ -226,7 +226,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
                 value={formData.companyName}
                 onChange={handleChange}
                 placeholder={t.contactPage.fields.companyPlaceholder}
-                className="w-full px-4 py-2.5 rounded-xl border border-[#E5E0EA] text-sm transition focus:border-[#5B2A86] focus:ring-2 focus:ring-[#5B2A86]/20 focus:outline-hidden"
+                className="w-full px-4 py-2.5 rounded-xl border border-[#E2DDD2] text-sm transition focus:border-[#0E2922] focus:ring-2 focus:ring-[#C8943D]/25 focus:outline-hidden"
               />
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Phone Number */}
             <div>
-              <label htmlFor="phone" className="block text-xs font-bold text-[#231F20] mb-1.5">
+              <label htmlFor="phone" className="block text-xs font-bold text-[#0E2922] mb-1.5">
                 {t.contactPage.fields.phone} <span className="text-red-500">*</span>
               </label>
               <input
@@ -247,7 +247,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
                 className={`w-full px-4 py-2.5 rounded-xl border text-sm transition focus:outline-hidden focus:ring-2 ${
                   errors.phone 
                     ? 'border-red-500 focus:ring-red-300' 
-                    : 'border-[#E5E0EA] focus:border-[#5B2A86] focus:ring-[#5B2A86]/20'
+                    : 'border-[#E2DDD2] focus:border-[#0E2922] focus:ring-[#C8943D]/25'
                 }`}
               />
               {errors.phone && (
@@ -257,7 +257,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
 
             {/* Email Address */}
             <div>
-              <label htmlFor="email" className="block text-xs font-bold text-[#231F20] mb-1.5">
+              <label htmlFor="email" className="block text-xs font-bold text-[#0E2922] mb-1.5">
                 {t.contactPage.fields.email}
               </label>
               <input
@@ -270,7 +270,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
                 className={`w-full px-4 py-2.5 rounded-xl border text-sm transition focus:outline-hidden focus:ring-2 ${
                   errors.email 
                     ? 'border-red-500 focus:ring-red-300' 
-                    : 'border-[#E5E0EA] focus:border-[#5B2A86] focus:ring-[#5B2A86]/20'
+                    : 'border-[#E2DDD2] focus:border-[#0E2922] focus:ring-[#C8943D]/25'
                 }`}
               />
               {errors.email && (
@@ -282,7 +282,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Product of Interest */}
             <div>
-              <label htmlFor="product" className="block text-xs font-bold text-[#231F20] mb-1.5">
+              <label htmlFor="product" className="block text-xs font-bold text-[#0E2922] mb-1.5">
                 {t.contactPage.fields.product} <span className="text-red-500">*</span>
               </label>
               <select
@@ -293,7 +293,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
                 className={`w-full px-4 py-2.5 rounded-xl border text-sm transition bg-white focus:outline-hidden focus:ring-2 ${
                   errors.product 
                     ? 'border-red-500 focus:ring-red-300' 
-                    : 'border-[#E5E0EA] focus:border-[#5B2A86] focus:ring-[#5B2A86]/20'
+                    : 'border-[#E2DDD2] focus:border-[#0E2922] focus:ring-[#C8943D]/25'
                 }`}
               >
                 <option value="">{t.contactPage.fields.productSelectDefault}</option>
@@ -311,7 +311,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
 
             {/* Estimated Quantity */}
             <div>
-              <label htmlFor="quantity" className="block text-xs font-bold text-[#231F20] mb-1.5">
+              <label htmlFor="quantity" className="block text-xs font-bold text-[#0E2922] mb-1.5">
                 {t.contactPage.fields.quantity}
               </label>
               <input
@@ -321,14 +321,14 @@ export default function EnquiryForm({ initialProductId = '' }) {
                 value={formData.quantity}
                 onChange={handleChange}
                 placeholder={t.contactPage.fields.quantityPlaceholder}
-                className="w-full px-4 py-2.5 rounded-xl border border-[#E5E0EA] text-sm transition focus:border-[#5B2A86] focus:ring-2 focus:ring-[#5B2A86]/20 focus:outline-hidden"
+                className="w-full px-4 py-2.5 rounded-xl border border-[#E2DDD2] text-sm transition focus:border-[#0E2922] focus:ring-2 focus:ring-[#C8943D]/25 focus:outline-hidden"
               />
             </div>
           </div>
 
           {/* Message / Requirements */}
           <div>
-            <label htmlFor="message" className="block text-xs font-bold text-[#231F20] mb-1.5">
+            <label htmlFor="message" className="block text-xs font-bold text-[#0E2922] mb-1.5">
               {t.contactPage.fields.message} <span className="text-red-500">*</span>
             </label>
             <textarea
@@ -341,7 +341,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
               className={`w-full px-4 py-2.5 rounded-xl border text-sm transition focus:outline-hidden focus:ring-2 ${
                 errors.message 
                   ? 'border-red-500 focus:ring-red-300' 
-                  : 'border-[#E5E0EA] focus:border-[#5B2A86] focus:ring-[#5B2A86]/20'
+                  : 'border-[#E2DDD2] focus:border-[#0E2922] focus:ring-[#C8943D]/25'
               }`}
             />
             {errors.message && (
@@ -354,9 +354,9 @@ export default function EnquiryForm({ initialProductId = '' }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#5B2A86] hover:bg-[#471F6B] text-white text-sm font-bold shadow-md shadow-[#5B2A86]/25 transition hover:shadow-lg disabled:opacity-50 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-sm font-bold shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg disabled:opacity-50 cursor-pointer border border-[#C8943D]/30"
             >
-              <Send className="w-4 h-4" />
+              <Send className="w-4 h-4 text-[#C8943D]" />
               <span>{isSubmitting ? t.contactPage.submitting : t.contactPage.btnSubmit}</span>
             </button>
           </div>

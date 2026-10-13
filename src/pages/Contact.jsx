@@ -32,7 +32,7 @@ export default function Contact() {
 
       {/* Hero Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-[#F2F0F4] rounded-3xl p-8 sm:p-14 border border-[#E5E0EA] space-y-4">
+        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-4">
           <SectionHeading
             badge={t.contactPage.badge}
             title={t.contactPage.title}
@@ -48,8 +48,8 @@ export default function Contact() {
           {/* Left Column: Contact Cards & Info */}
           <div className="lg:col-span-5 space-y-6">
             
-            <div className="bg-white rounded-3xl border border-[#E5E0EA] p-6 sm:p-8 space-y-6 shadow-sm">
-              <h3 className="text-xl font-extrabold text-[#231F20] font-['Outfit',sans-serif]">
+            <div className="bg-white rounded-3xl border border-[#E2DDD2] p-6 sm:p-8 space-y-6 shadow-sm">
+              <h3 className="text-xl font-extrabold text-[#0E2922] font-['Outfit',sans-serif]">
                 {t.contactPage.infoHeading}
               </h3>
 
@@ -57,18 +57,18 @@ export default function Contact() {
                 
                 {/* Phone Numbers */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#5B2A86]/10 text-[#5B2A86] flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0E2922]/10 text-[#0E2922] flex items-center justify-center shrink-0">
+                    <Phone className="w-5 h-5 text-[#C8943D]" />
                   </div>
                   <div className="space-y-1">
-                    <div className="text-xs font-bold uppercase tracking-wider text-[#45414A]">
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#3D4744]">
                       {t.contactPage.phoneLabel}
                     </div>
                     <div className="space-y-1.5 pt-0.5">
                       <div className="flex flex-wrap items-center gap-2">
                         <a 
                           href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
-                          className="font-bold text-base text-[#231F20] hover:text-[#5B2A86] transition"
+                          className="font-bold text-base text-[#0E2922] hover:text-[#C8943D] transition"
                         >
                           {COMPANY_INFO.phone.primary}
                         </a>
@@ -79,7 +79,7 @@ export default function Contact() {
                       <div>
                         <a 
                           href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
-                          className="font-bold text-base text-[#231F20] hover:text-[#5B2A86] transition block"
+                          className="font-bold text-base text-[#0E2922] hover:text-[#C8943D] transition block"
                         >
                           {COMPANY_INFO.phone.secondary}
                         </a>
@@ -90,16 +90,16 @@ export default function Contact() {
 
                 {/* Email Address */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#5B2A86]/10 text-[#5B2A86] flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0E2922]/10 text-[#0E2922] flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-[#C8943D]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-[#45414A]">
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#3D4744]">
                       {t.contactPage.emailLabel}
                     </div>
                     <a 
                       href={`mailto:${COMPANY_INFO.email.sales}`}
-                      className="font-bold text-[#231F20] hover:text-[#5B2A86] transition block mt-0.5 break-all"
+                      className="font-bold text-[#0E2922] hover:text-[#C8943D] transition block mt-0.5 break-all"
                     >
                       {COMPANY_INFO.email.sales}
                     </a>
@@ -108,14 +108,14 @@ export default function Contact() {
 
                 {/* Business Address */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#5B2A86]/10 text-[#5B2A86] flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0E2922]/10 text-[#0E2922] flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-[#C8943D]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-[#45414A]">
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#3D4744]">
                       {t.contactPage.addressLabel}
                     </div>
-                    <div className="font-semibold text-[#231F20] mt-0.5 leading-relaxed">
+                    <div className="font-semibold text-[#0E2922] mt-0.5 leading-relaxed">
                       {COMPANY_INFO.address[lang] || COMPANY_INFO.address.en}
                     </div>
                   </div>
@@ -123,14 +123,14 @@ export default function Contact() {
 
                 {/* Working Hours */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#5B2A86]/10 text-[#5B2A86] flex items-center justify-center shrink-0">
-                    <Clock className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0E2922]/10 text-[#0E2922] flex items-center justify-center shrink-0">
+                    <Clock className="w-5 h-5 text-[#C8943D]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-[#45414A]">
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#3D4744]">
                       {t.contactPage.hoursLabel}
                     </div>
-                    <div className="font-semibold text-[#231F20] mt-0.5">
+                    <div className="font-semibold text-[#0E2922] mt-0.5">
                       {COMPANY_INFO.workingHours[lang]}
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function Contact() {
               </div>
 
               {/* WhatsApp Quick Action Button */}
-              <div className="pt-4 border-t border-[#F2F0F4]">
+              <div className="pt-4 border-t border-[#E2DDD2]">
                 <a
                   href={getWhatsAppUrl(null, lang)}
                   target="_blank"

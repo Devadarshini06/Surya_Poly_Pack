@@ -46,13 +46,13 @@ export default function Gallery() {
 
       {/* Hero Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-[#F2F0F4] rounded-3xl p-8 sm:p-14 border border-[#E5E0EA] space-y-4">
+        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-4">
           <SectionHeading
             badge={t.galleryPage.badge}
             title={t.galleryPage.title}
             subtitle={t.galleryPage.subtitle}
           />
-          <div className="text-xs text-[#45414A] bg-white p-3.5 rounded-xl border border-[#E5E0EA] inline-block">
+          <div className="text-xs text-[#3D4744] bg-white p-3.5 rounded-xl border border-[#E2DDD2] inline-block">
             ℹ️ {t.galleryPage.disclaimer}
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Gallery() {
 
       {/* Category Filter Tabs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E5E0EA]">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2]">
           {GALLERY_CATEGORIES.map(cat => (
             <button
               key={cat.id}
@@ -70,8 +70,8 @@ export default function Gallery() {
               }}
               className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-[#5B2A86] text-white shadow-xs'
-                  : 'bg-white border border-[#E5E0EA] text-[#45414A] hover:bg-[#F2F0F4]'
+                  ? 'bg-[#0E2922] text-[#FAF8F3] border border-[#C8943D]/40 shadow-xs'
+                  : 'bg-white border border-[#E2DDD2] text-[#3D4744] hover:bg-[#F3EFE6] hover:text-[#0E2922]'
               }`}
             >
               {lang === 'ta' ? cat.nameTa : cat.nameEn}
@@ -89,9 +89,9 @@ export default function Gallery() {
               <div
                 key={item.id}
                 onClick={() => setActiveLightboxIndex(idx)}
-                className="bg-white rounded-2xl border border-[#E5E0EA] overflow-hidden group cursor-pointer card-hover-effect flex flex-col justify-between"
+                className="bg-white rounded-2xl border border-[#E2DDD2] overflow-hidden group cursor-pointer card-hover-effect flex flex-col justify-between"
               >
-                <div className="relative aspect-4/3 w-full bg-[#F2F0F4] overflow-hidden">
+                <div className="relative aspect-4/3 w-full bg-[#F3EFE6] overflow-hidden">
                   <img
                     src={item.image}
                     alt={title}
@@ -99,20 +99,20 @@ export default function Gallery() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div className="p-3 rounded-full bg-white/90 text-[#5B2A86] shadow-lg">
-                      <ZoomIn className="w-5 h-5" />
+                    <div className="p-3 rounded-full bg-white/90 text-[#0E2922] shadow-lg">
+                      <ZoomIn className="w-5 h-5 text-[#C8943D]" />
                     </div>
                   </div>
-                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-[#231F20]/80 backdrop-blur-xs text-white">
+                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-[#0B201A]/85 backdrop-blur-xs text-[#FAF8F3] border border-[#C8943D]/30">
                     {item.tag}
                   </span>
                 </div>
 
                 <div className="p-4 space-y-1">
-                  <h3 className="text-sm font-bold text-[#231F20] font-['Outfit',sans-serif] line-clamp-1">
+                  <h3 className="text-sm font-bold text-[#0E2922] font-['Outfit',sans-serif] line-clamp-1">
                     {title}
                   </h3>
-                  <p className="text-xs text-[#45414A] line-clamp-2">
+                  <p className="text-xs text-[#3D4744] line-clamp-2">
                     {desc}
                   </p>
                 </div>
@@ -173,7 +173,7 @@ export default function Gallery() {
 
             {/* Lightbox Caption */}
             <div className="mt-4 text-center max-w-xl text-white space-y-1">
-              <div className="text-xs font-bold uppercase tracking-wider text-[#8E5FD8]">
+              <div className="text-xs font-bold uppercase tracking-wider text-[#DBB061]">
                 {activeItem.tag}
               </div>
               <h3 className="text-lg font-bold">

@@ -57,7 +57,7 @@ export default function Products() {
 
       {/* Page Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-[#F2F0F4] rounded-3xl p-8 sm:p-14 border border-[#E5E0EA]">
+        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2]">
           <SectionHeading
             badge={t.productsPage.badge}
             title={t.productsPage.title}
@@ -65,9 +65,9 @@ export default function Products() {
           />
 
           {/* Environmental / Material Standards Notice */}
-          <div className="mt-6 p-4 rounded-2xl bg-white border border-[#E5E0EA] flex items-start gap-3">
-            <AlertTriangle className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
-            <p className="text-xs text-[#45414A] leading-relaxed">
+          <div className="mt-6 p-4 rounded-2xl bg-white border border-[#E2DDD2] flex items-start gap-3">
+            <AlertTriangle className="w-4 h-4 text-[#C8943D] shrink-0 mt-0.5" />
+            <p className="text-xs text-[#3D4744] leading-relaxed">
               {t.productsPage.nonPlasticNotice}
             </p>
           </div>
@@ -86,8 +86,8 @@ export default function Products() {
                 onClick={() => handleCategoryChange(cat.id)}
                 className={`px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition cursor-pointer ${
                   selectedCategory === cat.id
-                    ? 'bg-[#5B2A86] text-white shadow-xs'
-                    : 'bg-white border border-[#E5E0EA] text-[#45414A] hover:bg-[#F2F0F4] hover:text-[#231F20]'
+                    ? 'bg-[#0E2922] text-[#FAF8F3] border border-[#C8943D]/40 shadow-xs'
+                    : 'bg-white border border-[#E2DDD2] text-[#3D4744] hover:bg-[#F3EFE6] hover:text-[#0E2922]'
                 }`}
               >
                 {lang === 'ta' ? cat.nameTa : cat.nameEn}
@@ -97,18 +97,18 @@ export default function Products() {
 
           {/* Search Input */}
           <div className="relative min-w-[280px]">
-            <Search className="w-4 h-4 text-[#45414A] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#3D4744] absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t.productsPage.searchPlaceholder}
-              className="w-full pl-10 pr-4 py-2.5 bg-white border border-[#E5E0EA] rounded-xl text-xs focus:outline-hidden focus:border-[#5B2A86] focus:ring-2 focus:ring-[#5B2A86]/20 transition"
+              className="w-full pl-10 pr-4 py-2.5 bg-white border border-[#E2DDD2] rounded-xl text-xs focus:outline-hidden focus:border-[#0E2922] focus:ring-2 focus:ring-[#C8943D]/25 transition"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#45414A] hover:text-[#231F20]"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#3D4744] hover:text-[#0E2922]"
               >
                 ✕
               </button>
@@ -118,7 +118,7 @@ export default function Products() {
         </div>
 
         {/* Count Summary */}
-        <div className="text-xs text-[#45414A] font-medium flex items-center justify-between">
+        <div className="text-xs text-[#3D4744] font-medium flex items-center justify-between">
           <span>
             {lang === 'ta' 
               ? `${filteredProducts.length} தயாரிப்புகள் கிடைக்கின்றன` 
@@ -128,7 +128,7 @@ export default function Products() {
           {(selectedCategory !== 'all' || searchQuery) && (
             <button
               onClick={handleReset}
-              className="inline-flex items-center gap-1.5 text-xs text-[#5B2A86] font-bold hover:underline"
+              className="inline-flex items-center gap-1.5 text-xs text-[#C8943D] font-bold hover:text-[#0E2922] transition"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>{t.productsPage.resetFilter}</span>
@@ -146,14 +146,14 @@ export default function Products() {
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-3xl border border-[#E5E0EA] p-12 text-center space-y-4">
-            <div className="w-14 h-14 rounded-2xl bg-[#F2F0F4] text-[#5B2A86] flex items-center justify-center mx-auto">
+          <div className="bg-white rounded-3xl border border-[#E2DDD2] p-12 text-center space-y-4">
+            <div className="w-14 h-14 rounded-2xl bg-[#F3EFE6] text-[#C8943D] flex items-center justify-center mx-auto">
               <Search className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-[#231F20]">
+            <h3 className="text-lg font-bold text-[#0E2922]">
               {t.productsPage.noProductsFound}
             </h3>
-            <p className="text-xs text-[#45414A] max-w-sm mx-auto">
+            <p className="text-xs text-[#3D4744] max-w-sm mx-auto">
               {lang === 'ta'
                 ? 'வேறு வார்த்தைகளை தேடவும் அல்லது வடிப்பான்களை மீட்டமைக்கவும்.'
                 : 'Try adjusting your search terms or clearing the category filter.'}
@@ -161,7 +161,7 @@ export default function Products() {
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#5B2A86] text-white text-xs font-bold"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0E2922] text-[#FAF8F3] hover:bg-[#1C473A] text-xs font-bold transition shadow-md"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>{t.productsPage.resetFilter}</span>

@@ -30,7 +30,7 @@ export default function Machinery() {
 
       {/* Hero Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-[#F2F0F4] rounded-3xl p-8 sm:p-14 border border-[#E5E0EA] space-y-6">
+        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-6">
           <SectionHeading
             badge={t.machineryPage.badge}
             title={t.machineryPage.title}
@@ -38,13 +38,13 @@ export default function Machinery() {
           />
 
           {/* Verification Transparency Alert Banner */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E5E0EA] flex items-start gap-3.5 shadow-xs">
-            <ShieldAlert className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E2DDD2] flex items-start gap-3.5 shadow-xs">
+            <ShieldAlert className="w-5 h-5 text-[#C8943D] shrink-0 mt-0.5" />
             <div className="space-y-1">
-              <h4 className="text-xs font-bold text-[#231F20]">
+              <h4 className="text-xs font-bold text-[#0E2922]">
                 {t.machineryPage.suppliedNoticeTitle}
               </h4>
-              <p className="text-xs text-[#45414A] leading-relaxed">
+              <p className="text-xs text-[#3D4744] leading-relaxed">
                 {t.machineryPage.suppliedNoticeText}
               </p>
             </div>
@@ -54,15 +54,15 @@ export default function Machinery() {
 
       {/* Filter Tabs & Machinery Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E5E0EA]">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2]">
           {categories.map(cat => (
             <button
               key={cat.id}
               onClick={() => setFilter(cat.id)}
               className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition cursor-pointer ${
                 filter === cat.id
-                  ? 'bg-[#5B2A86] text-white shadow-xs'
-                  : 'bg-white border border-[#E5E0EA] text-[#45414A] hover:bg-[#F2F0F4]'
+                  ? 'bg-[#0E2922] text-[#FAF8F3] border border-[#C8943D]/40 shadow-xs'
+                  : 'bg-white border border-[#E2DDD2] text-[#3D4744] hover:bg-[#F3EFE6] hover:text-[#0E2922]'
               }`}
             >
               {cat.label}
@@ -78,17 +78,17 @@ export default function Machinery() {
       </section>
 
       {/* Flexographic Printing Technology & Process Section */}
-      <section className="bg-[#231F20] text-white py-16 sm:py-20">
+      <section className="bg-[#0B201A] text-white py-16 sm:py-20 border-y border-[#C8943D]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
           
           <div className="max-w-3xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C8943D]/20 border border-[#C8943D]/30 text-[#DBB061] text-xs font-bold uppercase tracking-wider">
               <span>{lang === 'ta' ? 'அச்சிடும் முறை' : 'Flexo Printing Guide'}</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-['Outfit',sans-serif]">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#FAF8F3] font-['Outfit',sans-serif]">
               {FLEXO_CAPABILITIES.title[lang]}
             </h2>
-            <p className="text-sm sm:text-base text-[#F2F0F4]/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-[#FAF8F3]/80 leading-relaxed">
               {FLEXO_CAPABILITIES.description[lang]}
             </p>
           </div>
@@ -97,15 +97,15 @@ export default function Machinery() {
             {FLEXO_CAPABILITIES.steps.map((st, idx) => (
               <div
                 key={idx}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-3 hover:bg-white/10 transition-colors"
+                className="bg-white/5 border border-[#C8943D]/20 rounded-2xl p-6 space-y-3 hover:bg-white/10 transition-colors"
               >
-                <div className="text-2xl font-black text-[#8E5FD8] font-['Outfit',sans-serif]">
+                <div className="text-2xl font-black text-[#C8943D] font-['Outfit',sans-serif]">
                   {st.step}
                 </div>
-                <h3 className="text-base font-bold text-white font-['Outfit',sans-serif]">
+                <h3 className="text-base font-bold text-[#FAF8F3] font-['Outfit',sans-serif]">
                   {lang === 'ta' ? st.titleTa : st.titleEn}
                 </h3>
-                <p className="text-xs text-[#F2F0F4]/75 leading-relaxed">
+                <p className="text-xs text-[#FAF8F3]/75 leading-relaxed">
                   {lang === 'ta' ? st.descTa : st.descEn}
                 </p>
               </div>
@@ -117,7 +117,7 @@ export default function Machinery() {
 
       {/* Polymer Film Conversion Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-white rounded-3xl border border-[#E5E0EA] p-8 sm:p-12 shadow-sm space-y-6">
+        <div className="bg-white rounded-3xl border border-[#E2DDD2] p-8 sm:p-12 shadow-sm space-y-6">
           <SectionHeading
             badge={lang === 'ta' ? 'மூலப்பொருள் செயலாக்கம்' : 'Polymer Substrates'}
             title={t.machineryPage.filmConversionHeading}
@@ -125,21 +125,21 @@ export default function Machinery() {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
-            <div className="p-4 rounded-xl bg-[#FAF9F6] border border-[#E5E0EA]">
-              <div className="font-bold text-sm text-[#231F20]">HM / HDPE</div>
-              <div className="text-xs text-[#45414A] mt-1">High Molecular & High Density Film for grocery bags & covers.</div>
+            <div className="p-4 rounded-xl bg-[#F3EFE6] border border-[#E2DDD2]">
+              <div className="font-bold text-sm text-[#0E2922]">HM / HDPE</div>
+              <div className="text-xs text-[#3D4744] mt-1">High Molecular & High Density Film for grocery bags & covers.</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#FAF9F6] border border-[#E5E0EA]">
-              <div className="font-bold text-sm text-[#231F20]">LDPE</div>
-              <div className="text-xs text-[#45414A] mt-1">Low-Density Polyethylene with excellent sealability & transparency.</div>
+            <div className="p-4 rounded-xl bg-[#F3EFE6] border border-[#E2DDD2]">
+              <div className="font-bold text-sm text-[#0E2922]">LDPE</div>
+              <div className="text-xs text-[#3D4744] mt-1">Low-Density Polyethylene with excellent sealability & transparency.</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#FAF9F6] border border-[#E5E0EA]">
-              <div className="font-bold text-sm text-[#231F20]">LLDPE</div>
-              <div className="text-xs text-[#45414A] mt-1">Linear Low-Density Polyethylene offering superior puncture resistance.</div>
+            <div className="p-4 rounded-xl bg-[#F3EFE6] border border-[#E2DDD2]">
+              <div className="font-bold text-sm text-[#0E2922]">LLDPE</div>
+              <div className="text-xs text-[#3D4744] mt-1">Linear Low-Density Polyethylene offering superior puncture resistance.</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#FAF9F6] border border-[#E5E0EA]">
-              <div className="font-bold text-sm text-[#231F20]">PP (Polypropylene)</div>
-              <div className="text-xs text-[#45414A] mt-1">High clarity, glossy film for retail displays, covers, and snacks packaging.</div>
+            <div className="p-4 rounded-xl bg-[#F3EFE6] border border-[#E2DDD2]">
+              <div className="font-bold text-sm text-[#0E2922]">PP (Polypropylene)</div>
+              <div className="text-xs text-[#3D4744] mt-1">High clarity, glossy film for retail displays, covers, and snacks packaging.</div>
             </div>
           </div>
         </div>

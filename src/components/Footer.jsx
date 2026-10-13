@@ -21,7 +21,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#231F20] text-[#F2F0F4] pt-16 pb-10 border-t border-black/30">
+    <footer className="bg-[#0B201A] text-[#F3EFE6] pt-16 pb-10 border-t border-[#1C473A]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Main 4-column Grid */}
@@ -30,7 +30,7 @@ export default function Footer() {
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="inline-block group focus:outline-hidden">
-              <div className="bg-[#FAF9F6] px-3.5 py-2.5 rounded-2xl inline-block shadow-md transition-transform group-hover:scale-[1.02]">
+              <div className="bg-[#FAF8F3] px-3.5 py-2.5 rounded-2xl inline-block shadow-md transition-transform group-hover:scale-[1.02]">
                 <img
                   src={COMPANY_INFO.logo}
                   alt="Surya Poly Pack Logo"
@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-xs text-[#F2F0F4]/75 leading-relaxed max-w-sm">
+            <p className="text-xs text-[#F3EFE6]/75 leading-relaxed max-w-sm">
               {t.footer.companyDesc}
             </p>
 
@@ -61,34 +61,34 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-['Outfit',sans-serif]">
               {t.footer.quickLinks}
             </h4>
-            <ul className="space-y-2 text-xs font-medium text-[#F2F0F4]/80">
+            <ul className="space-y-2 text-xs font-medium text-[#F3EFE6]/80">
               <li>
-                <Link to="/" className="hover:text-[#8E5FD8] transition block">
+                <Link to="/" className="hover:text-[#DBB061] transition block">
                   {t.nav.home}
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#8E5FD8] transition block">
+                <Link to="/about" className="hover:text-[#DBB061] transition block">
                   {t.nav.about}
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-[#8E5FD8] transition block">
+                <Link to="/products" className="hover:text-[#DBB061] transition block">
                   {t.nav.products}
                 </Link>
               </li>
               <li>
-                <Link to="/machinery" className="hover:text-[#8E5FD8] transition block">
+                <Link to="/machinery" className="hover:text-[#DBB061] transition block">
                   {t.nav.machinery}
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="hover:text-[#8E5FD8] transition block">
+                <Link to="/gallery" className="hover:text-[#DBB061] transition block">
                   {t.nav.gallery}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-[#8E5FD8] transition block">
+                <Link to="/contact" className="hover:text-[#DBB061] transition block">
                   {t.nav.contact}
                 </Link>
               </li>
@@ -100,10 +100,10 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-['Outfit',sans-serif]">
               {t.footer.productsHeader}
             </h4>
-            <ul className="space-y-2 text-xs font-medium text-[#F2F0F4]/80">
+            <ul className="space-y-2 text-xs font-medium text-[#F3EFE6]/80">
               {productLinks.map((item, idx) => (
                 <li key={idx}>
-                  <Link to={item.path} className="hover:text-[#8E5FD8] transition block">
+                  <Link to={item.path} className="hover:text-[#DBB061] transition block">
                     {lang === 'ta' ? item.nameTa : item.nameEn}
                   </Link>
                 </li>
@@ -111,18 +111,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Contact Details Placeholders */}
+          {/* Col 4: Contact Details */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-['Outfit',sans-serif]">
               {t.footer.contactHeader}
             </h4>
-            <div className="space-y-3 text-xs text-[#F2F0F4]/80">
+            <div className="space-y-3 text-xs text-[#F3EFE6]/80">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#8E5FD8] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#C8943D] shrink-0 mt-0.5" />
                 <span>{COMPANY_INFO.address[lang] || COMPANY_INFO.address.en}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#8E5FD8] shrink-0" />
+                <Phone className="w-4 h-4 text-[#C8943D] shrink-0" />
                 <div className="flex flex-wrap items-center gap-1.5">
                   <a href={`tel:${COMPANY_INFO.phone.primaryRaw}`} className="hover:text-white transition">
                     {COMPANY_INFO.phone.primary}
@@ -134,12 +134,12 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#8E5FD8] shrink-0" />
+                <Mail className="w-4 h-4 text-[#C8943D] shrink-0" />
                 <a href={`mailto:${COMPANY_INFO.email.sales}`} className="hover:text-white transition">
                   {COMPANY_INFO.email.sales}
                 </a>
               </div>
-              <div className="text-[11px] text-[#F2F0F4]/50 pt-1">
+              <div className="text-[11px] text-[#F3EFE6]/50 pt-1">
                 {COMPANY_INFO.workingHours[lang]}
               </div>
             </div>
@@ -148,16 +148,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F2F0F4]/60 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F3EFE6]/60 gap-4">
           <p>© {new Date().getFullYear()} {t.footer.copyright}</p>
           <div className="flex items-center gap-4">
             <span className="hidden md:inline">{t.footer.disclaimer}</span>
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-lg bg-white/10 hover:bg-[#5B2A86] text-white transition flex items-center gap-1.5"
+              className="p-2.5 rounded-lg bg-white/10 hover:bg-[#1C473A] text-white transition flex items-center gap-1.5 cursor-pointer"
               aria-label={t.footer.backToTop}
             >
-              <ArrowUp className="w-4 h-4" />
+              <ArrowUp className="w-4 h-4 text-[#C8943D]" />
               <span className="hidden sm:inline text-[11px]">{t.footer.backToTop}</span>
             </button>
           </div>

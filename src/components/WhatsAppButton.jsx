@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
       >
         <MessageCircle className="w-7 h-7" />
         {/* Tooltip */}
-        <span className="absolute right-16 bg-[#231F20] text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+        <span className="absolute right-16 bg-[#0B201A] border border-[#C8943D]/30 text-[#FAF8F3] text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
           {lang === 'ta' ? 'வாட்ஸ்அப்பில் தொடர்புகொள்ள' : 'Chat on WhatsApp'}
         </span>
       </a>

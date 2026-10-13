@@ -1,29 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-violet: #5B2A86;
-  --color-brand-purple: #6F42C1;
-  --color-brand-purple-light: #8E5FD8;
-  --color-brand-purple-dark: #471F6B;
-  --color-brand-charcoal: #231F20;
-  --color-brand-warm-white: #FAF9F6;
-  --color-brand-light-grey: #F2F0F4;
-  --color-brand-neutral: #45414A;
-  --color-brand-muted: #736E7B;
-  --color-brand-border: #E5E0EA;
+  --color-brand-green: #0E2922;
+  --color-brand-emerald: #1C473A;
+  --color-brand-emerald-light: #2D6151;
+  --color-brand-emerald-dark: #0A1E19;
+  --color-brand-gold: #C8943D;
+  --color-brand-gold-light: #DBB061;
+  --color-brand-gold-dark: #A67628;
+  --color-brand-charcoal: #0B201A;
+  --color-brand-ivory: #FAF8F3;
+  --color-brand-cream: #F3EFE6;
+  --color-brand-neutral: #3D4744;
+  --color-brand-muted: #5E6B66;
+  --color-brand-border: #E2DDD2;
   --font-sans: 'Plus Jakarta Sans', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
   --font-heading: 'Outfit', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --brand-violet: #5B2A86;
-  --brand-purple: #6F42C1;
-  --brand-purple-light: #8E5FD8;
-  --brand-charcoal: #231F20;
-  --brand-warm-white: #FAF9F6;
-  --brand-light-grey: #F2F0F4;
-  --brand-neutral: #45414A;
-  --brand-border: #E5E0EA;
+  --brand-green: #0E2922;
+  --brand-emerald: #1C473A;
+  --brand-gold: #C8943D;
+  --brand-gold-light: #DBB061;
+  --brand-charcoal: #0B201A;
+  --brand-ivory: #FAF8F3;
+  --brand-cream: #F3EFE6;
+  --brand-neutral: #3D4744;
+  --brand-border: #E2DDD2;
 }
 
 @layer base {
@@ -33,36 +37,36 @@
   }
   
   body {
-    background-color: #FAF9F6;
-    color: #231F20;
+    background-color: #FAF8F3;
+    color: #0E2922;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
-    color: #231F20;
+    color: #0E2922;
     letter-spacing: -0.015em;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar with brand emerald and gold */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F2F0F4;
+  background: #F3EFE6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C4BFCC;
+  background: #C8BAA5;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5B2A86;
+  background: #C8943D;
 }
 
 /* Utility Animations & Card Styling */
@@ -72,12 +76,12 @@
 
 .card-hover-effect:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px -10px rgba(91, 42, 134, 0.12);
-  border-color: #8E5FD8;
+  box-shadow: 0 14px 30px -10px rgba(14, 41, 34, 0.12);
+  border-color: #C8943D;
 }
 
 .glass-nav {
-  background-color: rgba(250, 249, 246, 0.92);
+  background-color: rgba(250, 248, 243, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }

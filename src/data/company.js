@@ -53,14 +53,16 @@ export const COMPANY_INFO = {
     ta: "திங்கள் – சனி: காலை 9:00 – மாலை 7:00"
   },
 
-  // Brand Colors
+  // Brand Colors (Sampled from Logo)
   colors: {
-    deepViolet: "#5B2A86",
-    primaryPurple: "#6F42C1",
-    darkCharcoal: "#231F20",
-    warmWhite: "#FAF9F6",
-    lightGrey: "#F2F0F4",
-    neutralText: "#45414A"
+    brandGreen: "#0E2922",
+    brandEmerald: "#1C473A",
+    brandGold: "#C8943D",
+    brandIvory: "#FAF8F3",
+    brandCream: "#F3EFE6",
+    brandBorder: "#E2DDD2",
+    brandDark: "#0B201A",
+    neutralText: "#3D4744"
   },
 
   // Disclaimers and Notices
