@@ -107,9 +107,13 @@ export default function Home() {
                 <span>{t.hero.badge}</span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-[#0E2922] font-['Outfit',sans-serif] leading-[1.25] sm:leading-[1.22]">
-                <span className="block">{t.hero.headlineLine1 || "Packaging That Protects."}</span>
-                <span className="block mt-1 sm:mt-1.5">{t.hero.headlineLine2 || "Printing That Stands Out."}</span>
+              <h1 className={`hero-title font-extrabold text-[#0E2922] font-['Outfit',sans-serif] ${
+                lang === 'ta' 
+                  ? 'text-3xl sm:text-4xl lg:text-[2.35rem] xl:text-[2.5rem] leading-[1.3] sm:leading-[1.24]' 
+                  : 'text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.25] sm:leading-[1.22]'
+              }`}>
+                <span className="block sm:whitespace-nowrap">{t.hero.headlineLine1 || "Packaging That Protects."}</span>
+                <span className="block mt-1 sm:mt-1.5 sm:whitespace-nowrap">{t.hero.headlineLine2 || "Printing That Stands Out."}</span>
               </h1>
 
               <p className="text-base sm:text-lg text-[#3D4744] leading-relaxed max-w-2xl font-normal">
@@ -120,15 +124,15 @@ export default function Home() {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   to="/products"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] font-bold text-sm shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg active:scale-98 border border-[#C8943D]/30"
+                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] font-bold text-sm shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg active:scale-98 border border-[#C8943D]/30 whitespace-nowrap"
                 >
                   <span>{t.hero.btnExplore}</span>
-                  <ArrowRight className="w-4 h-4 text-[#C8943D]" />
+                  <ArrowRight className="w-4 h-4 text-[#C8943D] shrink-0" />
                 </Link>
 
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-[#F3EFE6] text-[#0E2922] border border-[#E2DDD2] font-bold text-sm shadow-xs transition hover:border-[#0E2922]/40"
+                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-white hover:bg-[#F3EFE6] text-[#0E2922] border border-[#E2DDD2] font-bold text-sm shadow-xs transition hover:border-[#0E2922]/40 whitespace-nowrap"
                 >
                   <span>{t.hero.btnContact}</span>
                 </Link>
@@ -136,17 +140,17 @@ export default function Home() {
 
               {/* Quick Spec Highlights */}
               <div className="pt-6 border-t border-[#E2DDD2] grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-                <div>
-                  <div className="text-xs font-bold text-[#C8943D] leading-tight">{t.hero.stat1}</div>
-                  <div className="text-xs text-[#3D4744] mt-1 leading-snug">{t.hero.stat1Sub}</div>
+                <div className="min-w-0">
+                  <div className="hero-spec-item text-[11px] sm:text-xs font-bold text-[#C8943D] leading-tight sm:whitespace-nowrap">{t.hero.stat1}</div>
+                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1 leading-snug sm:whitespace-nowrap">{t.hero.stat1Sub}</div>
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-[#C8943D] leading-tight">{t.hero.stat2}</div>
-                  <div className="text-xs text-[#3D4744] mt-1 leading-snug">{t.hero.stat2Sub}</div>
+                <div className="min-w-0">
+                  <div className="hero-spec-item text-[11px] sm:text-xs font-bold text-[#C8943D] leading-tight sm:whitespace-nowrap">{t.hero.stat2}</div>
+                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1 leading-snug sm:whitespace-nowrap">{t.hero.stat2Sub}</div>
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-[#C8943D] leading-tight">{t.hero.stat3}</div>
-                  <div className="text-xs text-[#3D4744] mt-1 leading-snug">{t.hero.stat3Sub}</div>
+                <div className="min-w-0">
+                  <div className="hero-spec-item text-[11px] sm:text-xs font-bold text-[#C8943D] leading-tight sm:whitespace-nowrap">{t.hero.stat3}</div>
+                  <div className="hero-spec-item text-[11px] sm:text-xs text-[#3D4744] mt-1 leading-snug sm:whitespace-nowrap">{t.hero.stat3Sub}</div>
                 </div>
               </div>
 
