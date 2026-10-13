@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-violet: #5B2A86;
+  --color-brand-purple: #6F42C1;
+  --color-brand-purple-light: #8E5FD8;
+  --color-brand-purple-dark: #471F6B;
+  --color-brand-charcoal: #231F20;
+  --color-brand-warm-white: #FAF9F6;
+  --color-brand-light-grey: #F2F0F4;
+  --color-brand-neutral: #45414A;
+  --color-brand-muted: #736E7B;
+  --color-brand-border: #E5E0EA;
+  --font-sans: 'Plus Jakarta Sans', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --brand-violet: #5B2A86;
+  --brand-purple: #6F42C1;
+  --brand-purple-light: #8E5FD8;
+  --brand-charcoal: #231F20;
+  --brand-warm-white: #FAF9F6;
+  --brand-light-grey: #F2F0F4;
+  --brand-neutral: #45414A;
+  --brand-border: #E5E0EA;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #FAF9F6;
+    color: #231F20;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+    color: #231F20;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F0F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4BFCC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B2A86;
+}
+
+/* Utility Animations & Card Styling */
+.card-hover-effect {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -10px rgba(91, 42, 134, 0.12);
+  border-color: #8E5FD8;
+}
+
+.glass-nav {
+  background-color: rgba(250, 249, 246, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
