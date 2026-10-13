@@ -21,31 +21,32 @@ export const COMPANY_INFO = {
     ta: "அச்சிடப்பட்ட பேக்கேஜிங் கவர்கள், நெகிழ்வான பேக்கேஜிங் தயாரிப்புகள், பவுச்சுகள் மற்றும் பாலி கன்வெர்ஷன் தீர்வுகளின் முன்னணி உற்பத்தியாளர்."
   },
   
-  // Contact Placeholders (Centrally configurable)
+  // Official Contact Details
   phone: {
-    primary: "+91 98765 43210", // Placeholder until official number is supplied
-    primaryRaw: "919876543210",
-    secondary: "+91 94421 00000",
-    secondaryRaw: "919442100000",
-    isPlaceholder: true
+    primary: "+91 97866 78966",
+    primaryRaw: "919786678966",
+    secondary: "+91 97866 78966",
+    secondaryRaw: "919786678966",
+    isPlaceholder: false
   },
   whatsapp: {
-    number: "919876543210", // Configurable WhatsApp number
+    number: "919786678966",
     defaultMessageEn: "Hello Surya Poly Pack, I am interested in custom packaging solutions. Please share product details and quote.",
     defaultMessageTa: "வணக்கம் சூர்யா பாலி பேக், எனக்கு தனிப்பயன் பேக்கேஜிங் தேவைப்படுகிறது. விவரங்களையும் விலைக் குறிப்பையும் பகிரவும்.",
-    isPlaceholder: true
+    isPlaceholder: false
   },
   email: {
-    sales: "info@suryapolypack.com", // Placeholder until official email supplied
-    isPlaceholder: true
+    sales: "suryapolypacking@gmail.com",
+    isPlaceholder: false
   },
   address: {
-    line1: "Industrial Estate / Manufacturing Zone",
-    city: "Tamil Nadu",
-    pincode: "626123",
+    en: "281C, Kanthapuram Colony, Kamarajar Salai, Sivakasi - 626 124.",
+    ta: "281C, கந்தபுரம் காலனி, காமராஜர் சாலை, சிவகாசி - 626124.",
+    full: "281C, Kanthapuram Colony, Kamarajar Salai, Sivakasi - 626 124.",
+    city: "Sivakasi",
+    pincode: "626 124",
     country: "India",
-    full: "Industrial Estate, Tamil Nadu, India",
-    isPlaceholder: true
+    isPlaceholder: false
   },
   workingHours: {
     en: "Monday – Saturday: 9:00 AM – 7:00 PM",

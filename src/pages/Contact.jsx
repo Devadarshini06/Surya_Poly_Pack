@@ -5,8 +5,7 @@ import {
   Mail, 
   MapPin, 
   Clock, 
-  MessageCircle, 
-  AlertCircle
+  MessageCircle
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY_INFO, getWhatsAppUrl } from '../data/company';
@@ -67,16 +66,13 @@ export default function Contact() {
                     </div>
                     <a 
                       href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
-                      className="font-bold text-[#231F20] hover:text-[#5B2A86] transition block mt-0.5"
+                      className="font-bold text-base text-[#231F20] hover:text-[#5B2A86] transition block mt-0.5"
                     >
                       {COMPANY_INFO.phone.primary}
                     </a>
-                    <a 
-                      href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
-                      className="text-xs text-[#45414A] hover:text-[#5B2A86] transition block"
-                    >
-                      {COMPANY_INFO.phone.secondary}
-                    </a>
+                    <span className="text-xs text-[#5B2A86] font-semibold">
+                      {lang === 'ta' ? 'அழைப்பு & வாட்ஸ்அப்' : 'Direct Call & WhatsApp'}
+                    </span>
                   </div>
                 </div>
 
@@ -91,7 +87,7 @@ export default function Contact() {
                     </div>
                     <a 
                       href={`mailto:${COMPANY_INFO.email.sales}`}
-                      className="font-bold text-[#231F20] hover:text-[#5B2A86] transition block mt-0.5"
+                      className="font-bold text-[#231F20] hover:text-[#5B2A86] transition block mt-0.5 break-all"
                     >
                       {COMPANY_INFO.email.sales}
                     </a>
@@ -107,8 +103,8 @@ export default function Contact() {
                     <div className="text-xs font-bold uppercase tracking-wider text-[#45414A]">
                       {t.contactPage.addressLabel}
                     </div>
-                    <div className="font-semibold text-[#231F20] mt-0.5">
-                      {COMPANY_INFO.address.full}
+                    <div className="font-semibold text-[#231F20] mt-0.5 leading-relaxed">
+                      {COMPANY_INFO.address[lang] || COMPANY_INFO.address.en}
                     </div>
                   </div>
                 </div>
@@ -142,14 +138,6 @@ export default function Contact() {
                   <span>{t.contactPage.whatsappBtn}</span>
                 </a>
               </div>
-            </div>
-
-            {/* Configurable Placeholders Notice */}
-            <div className="p-4 rounded-2xl bg-[#FAF9F6] border border-[#E5E0EA] flex items-start gap-3">
-              <AlertCircle className="w-4 h-4 text-[#5B2A86] shrink-0 mt-0.5" />
-              <p className="text-xs text-[#45414A] leading-relaxed">
-                {t.contactPage.phonePlaceholderNotice}
-              </p>
             </div>
 
           </div>

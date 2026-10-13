@@ -8,7 +8,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const location = useLocation();
 
   // Close mobile menu on page transition
@@ -46,7 +46,7 @@ export default function Header() {
             </span>
             <span className="hidden md:inline text-white/30">|</span>
             <span className="hidden md:flex items-center gap-1 text-[#F2F0F4]/80">
-              📍 {COMPANY_INFO.address.full}
+              📍 {COMPANY_INFO.address[lang] || COMPANY_INFO.address.en}
             </span>
           </div>
 
