@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY_INFO } from '../data/company';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -36,47 +36,57 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Corporate Strip - Deep Pine Green with Golden Accents */}
-      <div className="bg-[#0B201A] text-[#F3EFE6] text-xs py-2 px-4 sm:px-8 border-b border-[#1C473A]/40">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-4 text-[11px] sm:text-xs">
+      {/* Top Corporate Strip - Single Ultra-Clean Line */}
+      <div className="bg-[#0B201A] text-[#F3EFE6] text-xs py-2 px-4 sm:px-8 border-b border-[#1C473A]/40 overflow-hidden">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-nowrap whitespace-nowrap">
+          
+          {/* Left: Brand Subtitle & Location */}
+          <div className="flex items-center gap-3 text-[11px] sm:text-xs shrink-0">
             <span className="flex items-center gap-1.5 font-medium text-[#FAF8F3]">
               <span className="w-2 h-2 rounded-full bg-[#C8943D] animate-pulse"></span>
-              {t.brandSubtitle}
+              <span>{t.brandSubtitle}</span>
             </span>
-            <span className="hidden md:inline text-white/20">|</span>
-            <span className="hidden md:flex items-center gap-1 text-[#F3EFE6]/80">
-              📍 {COMPANY_INFO.address[lang] || COMPANY_INFO.address.en}
+            <span className="hidden lg:inline text-white/20">|</span>
+            <span className="hidden lg:flex items-center gap-1 text-[#F3EFE6]/80">
+              <MapPin className="w-3.5 h-3.5 text-[#C8943D] shrink-0" />
+              <span>{lang === 'ta' ? 'சிவகாசி, தமிழ்நாடு' : 'Sivakasi, Tamil Nadu'}</span>
             </span>
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs">
-            <a 
-              href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
-              className="flex items-center gap-1.5 text-[#F3EFE6] hover:text-[#DBB061] transition"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#C8943D]" />
-              <span>{COMPANY_INFO.phone.primary}</span>
-            </a>
-            <span className="text-white/20 hidden md:inline">/</span>
-            <a 
-              href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
-              className="hidden md:flex items-center gap-1.5 text-[#F3EFE6] hover:text-[#DBB061] transition"
-            >
-              <span>{COMPANY_INFO.phone.secondary}</span>
-            </a>
-            <span className="hidden sm:inline text-white/20">|</span>
+          {/* Right: Phone Numbers, Email & Language Switcher */}
+          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs shrink-0">
+            <div className="flex items-center gap-1.5 font-medium">
+              <Phone className="w-3.5 h-3.5 text-[#C8943D] shrink-0" />
+              <a 
+                href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
+                className="text-[#F3EFE6] hover:text-[#DBB061] transition"
+              >
+                {COMPANY_INFO.phone.primary}
+              </a>
+              <span className="text-white/20 hidden sm:inline">/</span>
+              <a 
+                href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
+                className="hidden sm:inline text-[#F3EFE6] hover:text-[#DBB061] transition"
+              >
+                {COMPANY_INFO.phone.secondary}
+              </a>
+            </div>
+
+            <span className="hidden xl:inline text-white/20">|</span>
+
             <a 
               href={`mailto:${COMPANY_INFO.email.sales}`}
-              className="hidden sm:flex items-center gap-1.5 text-[#F3EFE6] hover:text-[#DBB061] transition"
+              className="hidden xl:flex items-center gap-1.5 text-[#F3EFE6] hover:text-[#DBB061] transition"
             >
-              <Mail className="w-3.5 h-3.5 text-[#C8943D]" />
+              <Mail className="w-3.5 h-3.5 text-[#C8943D] shrink-0" />
               <span>{COMPANY_INFO.email.sales}</span>
             </a>
-            <div className="hidden sm:block ml-2">
+
+            <div className="hidden sm:block ml-1">
               <LanguageSwitcher />
             </div>
           </div>
+
         </div>
       </div>
 
