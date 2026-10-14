@@ -52,7 +52,7 @@ export const PRODUCTS = [
       ta: 'பேரீச்சம்பழம் மற்றும் பதப்படுத்தப்பட்ட உலர் பழங்களின் சில்லறை பேக்கிங்.'
     },
     materialType: 'High-Molecular (HM) / LDPE Barrier Film',
-    image: '/images/food_packaging_pouches.jpg',
+    image: '/images/dates_packaging.jpg',
     features: {
       en: ['Puncture-resistant gauge', 'Strong airtight heat sealing', 'Custom window visibility option'],
       ta: ['கிழிசல் எதிர்ப்பு திறன்', 'உறுதியான வெப்ப சீலிங்', 'உள்ளடக்கம் தெரியும் கண்ணாடி போன்ற வடிவமைப்பு']
@@ -74,7 +74,7 @@ export const PRODUCTS = [
       ta: 'முந்திரி பருப்பு, வறுத்த பாதாம், அக்ரூட், பிஸ்தா மற்றும் உலர் கொட்டைகள்.'
     },
     materialType: 'Polypropylene (PP) / Barrier Lamination',
-    image: '/images/standup_pouches.jpg',
+    image: '/images/dry_fruits_packaging.jpg',
     features: {
       en: ['Oxygen and humidity resistance', 'Crystal clear display clarity', 'Flexographic brand printing'],
       ta: ['காற்று மற்றும் ஈரப்பதம் புகா தன்மை', 'தெளிவான தயாரிப்பு காட்சி', 'பிராண்ட் ஃப்ளெக்ஸோ அச்சிடுதல்']
@@ -96,7 +96,7 @@ export const PRODUCTS = [
       ta: 'ஊறுகாய் வகைகள், தொக்கு, பேஸ்ட்கள் மற்றும் மசாலா சமையல் பொருட்கள்.'
     },
     materialType: 'Multi-layer Polyethylene / Barrier Film',
-    image: '/images/food_packaging_pouches.jpg',
+    image: '/images/pickle_packaging.jpg',
     features: {
       en: ['Superior oil and acid resistance', 'Zero-leakage heat seal technology', 'Tough multi-layer construction'],
       ta: ['எண்ணெய் மற்றும் அமில எதிர்ப்பு', 'கசிவு இல்லாத சீலிங் முறை', 'உறுதியான பல அடுக்கு அமைப்பு']
@@ -140,7 +140,7 @@ export const PRODUCTS = [
       ta: 'மிளகாய் தூள், மஞ்சள் தூள், கரம் மசாலா, சாம்பார் தூள் மற்றும் கலவை மசாலாக்கள்.'
     },
     materialType: 'High-Barrier Flexible Packaging Film',
-    image: '/images/food_packaging_pouches.jpg',
+    image: '/images/masala_packaging.jpg',
     features: {
       en: ['Aroma barrier protection', 'Light and UV resistance', 'High-definition flexo print reproduction'],
       ta: ['மணம் மாறாமல் பாதுகாக்கும் திறன்', 'ஒளி மற்றும் ஈரப்பதம் தடுப்பு', 'தெளிவான உயர் தர அச்சிடுதல்']
@@ -164,7 +164,7 @@ export const PRODUCTS = [
       ta: 'சூப்பர் மார்க்கெட், பல்பொருள் அங்காடிகள் மற்றும் சில்லறை வணிகம்.'
     },
     materialType: 'HM / HDPE Polyethylene',
-    image: '/images/pp_bags.jpg',
+    image: '/images/grocery_carry_bags.jpg',
     features: {
       en: ['Reinforced bottom seal', 'High tensile load tolerance', 'Uniform handle punches and cutouts'],
       ta: ['வலுவூட்டப்பட்ட கீழ் சீலிங்', 'அதிக சுமை தாங்கும் திறன்', 'சீரான கைப்பிடி கட்டிங்']
@@ -187,7 +187,7 @@ export const PRODUCTS = [
     },
     materialType: 'Non-Plastic Alternative Fabric / Woven Substrate',
     isNonPlastic: true,
-    image: '/images/pp_bags.jpg',
+    image: '/images/eco_non_plastic_bags.jpg',
     features: {
       en: ['Distinct non-plastic category', 'Reusable strength structure', 'Premium aesthetic printing'],
       ta: ['பிளாஸ்டிக் அல்லாத பிரத்யேக வகை', 'மறுபயன்பாட்டு கட்டமைப்பு', 'நேர்த்தியான லோகோ பிரிண்டிங்']
@@ -209,7 +209,7 @@ export const PRODUCTS = [
       ta: 'எழுத்துப் பொருட்கள், உடைகள், வன்பொருள் பாகங்கள் மற்றும் வீட்டு உபயோக பொருட்கள்.'
     },
     materialType: 'PP / LDPE / LLDPE Polyethylene',
-    image: '/images/pp_bags.jpg',
+    image: '/images/general_poly_covers.jpg',
     features: {
       en: ['Available in custom dimensions', 'Clean transparent or printed surface', 'Consistent thickness control'],
       ta: ['விருப்ப அளவுகளில் தயாரிப்பு', 'தெளிவான அல்லது அச்சிடப்பட்ட மேற்பரப்பு', 'சீரான மைக்ரான் தடிமன்']
@@ -231,7 +231,7 @@ export const PRODUCTS = [
       ta: 'கட்டுமான தளங்கள், தரை மற்றும் டைல்ஸ் பாதுகாப்பு, வண்ணம் பூசும் பணிகள்.'
     },
     materialType: 'Heavy-Gauge LDPE / Polyethylene Film',
-    image: '/images/industrial_packaging.jpg',
+    image: '/images/floor_protection_covers.jpg',
     features: {
       en: ['Heavy-duty puncture resistance', 'Broad roll width coverage', 'Dust, paint, and water repellent'],
       ta: ['அதிக கிழிசல் எதிர்ப்பு', 'அகலமான ரோல் வடிவமைப்பு', 'தூசி, பெயிண்ட் மற்றும் நீர் புகா தன்மை']
@@ -277,7 +277,7 @@ export const PRODUCTS = [
       ta: 'தேயிலை, உலர் பழங்கள், மசாலா பொருட்கள் மற்றும் சிறப்பு சில்லறை விற்பனை.'
     },
     materialType: 'Multi-layer Polyethylene / Barrier Film with Ziplock',
-    image: '/images/standup_pouches.jpg',
+    image: '/images/ziplock_pouches.jpg',
     features: {
       en: ['Press-to-close resealable track', 'Tear notches for easy opening', 'High air & moisture barrier'],
       ta: ['எளிதில் மூடக்கூடிய ஜிப்பர்', 'எளிதாக திறக்கும் நாட்ச் வடிவம்', 'சிறந்த காற்று & ஈரப்பதம் தடுப்பு']
@@ -299,7 +299,7 @@ export const PRODUCTS = [
       ta: 'பிராண்டட் நுகர்வோர் பொருட்கள், கார்ப்பரேட் பேக்கேஜிங் மற்றும் தொழில்துறை தேவைகள்.'
     },
     materialType: 'Custom Polypropylene / Polyethylene Substrates',
-    image: '/images/food_packaging_pouches.jpg',
+    image: '/images/calendars.jpg',
     features: {
       en: ['Bespoke flexographic printing up to multi-colour', 'Tailored micron thickness & sizes', 'Precision registration'],
       ta: ['விருப்ப வண்ணங்களில் பிரிண்டிங்', 'தேவைக்கேற்ற மைக்ரான் மற்றும் அளவுகள்', 'துல்லியமான அச்சிடும் தொழில்நுட்பம்']
@@ -323,7 +323,7 @@ export const PRODUCTS = [
       ta: 'கொசுவர்த்தி சுருள்கள், நறுமண வட்டுக்கள் மற்றும் பூச்சி விரட்டி பேக்கிங்.'
     },
     materialType: 'High-Molecular (HM) / HDPE Polyethylene',
-    image: '/images/industrial_packaging.jpg',
+    image: '/images/mosquito_coil_packaging.jpg',
     features: {
       en: ['Breakage prevention containment', 'Precise fit dimensions', 'Clean printed brand display'],
       ta: ['உடைவதைத் தடுக்கும் கட்டமைப்பு', 'துல்லியமான அளவு', 'தெளிவான பிராண்ட் அச்சிடுதல்']
@@ -345,7 +345,7 @@ export const PRODUCTS = [
       ta: 'தீப்பெட்டி மொத்த விற்பனை பண்டல்கள் மற்றும் ஏற்றுமதி பேக்கிங்.'
     },
     materialType: 'Polypropylene (PP) / HM Film',
-    image: '/images/industrial_packaging.jpg',
+    image: '/images/matches_packaging.jpg',
     features: {
       en: ['Moisture and humidity exclusion', 'Tight shrink-ready or wrap seal', 'Cost-effective bulk packaging'],
       ta: ['ஈரப்பதம் புகா தன்மை', 'இறுக்கமான பண்டல் சீலிங்', 'சிக்கனமான மொத்த பேக்கிங்']
@@ -367,7 +367,7 @@ export const PRODUCTS = [
       ta: 'பட்டாசு பரிசு பெட்டிகள், கம்பி மத்தாப்பு பண்டல்கள் மற்றும் வெடி பேக்கிங்.'
     },
     materialType: 'High-Strength Polyethylene / HM / LDPE',
-    image: '/images/industrial_packaging.jpg',
+    image: '/images/fireworks_packaging.jpg',
     features: {
       en: ['High resistance to tearing and abrasions', 'Water-resistant barrier', 'Custom branding and cautionary printing'],
       ta: ['அதிக கிழிசல் எதிர்ப்பு', 'நீர் புகா பாதுகாப்பு', 'பிராண்ட் மற்றும் எச்சரிக்கை வாசகங்கள் அச்சிடுதல்']
@@ -389,7 +389,7 @@ export const PRODUCTS = [
       ta: 'பிஜிலி பட்டாசுகள் மற்றும் திருவிழா பட்டாசு பேக்கிங்.'
     },
     materialType: 'Polypropylene (PP) / HM Film',
-    image: '/images/industrial_packaging.jpg',
+    image: '/images/bijali_covers.jpg',
     features: {
       en: ['Compact dimension calibration', 'Excellent transparency', 'Strong longitudinal and bottom seals'],
       ta: ['துல்லியமான சிறிய அளவுகள்', 'சிறந்த ஒளிபுகும் தன்மை', 'வலுவான கீழ் சீலிங்']
@@ -411,7 +411,7 @@ export const PRODUCTS = [
       ta: 'வாகன உதிரிபாகங்கள், இயந்திர பாகங்கள், ரப்பர் புஷ்கள் மற்றும் வன்பொருட்கள்.'
     },
     materialType: 'Heavy-Duty LDPE / LLDPE / HDPE Film',
-    image: '/images/industrial_packaging.jpg',
+    image: '/images/automobile_parts_packaging.jpg',
     features: {
       en: ['Heavy-gauge puncture resistance', 'Protection from dust and handling', 'Custom size roll or pre-cut bags'],
       ta: ['தடிமனான கிழிசல் எதிர்ப்பு', 'தூசி மற்றும் சேத பாதுகாப்பு', 'ரோல் அல்லது வெட்டப்பட்ட பை வடிவம்']
@@ -433,7 +433,7 @@ export const PRODUCTS = [
       ta: 'நர்சரிகள், தோட்டக்கலை, மரக்கன்றுகள் வளர்ப்பு மற்றும் பண்ணை பயன்பாடு.'
     },
     materialType: 'UV-Stabilized Polyethylene (HDPE / LDPE)',
-    image: '/images/industrial_packaging.jpg',
+    image: '/images/nursery_plant_bags.jpg',
     features: {
       en: ['Weather and UV degradation tolerance', 'Pre-punched drainage holes available', 'Strong root-holding capacity'],
       ta: ['சூரிய ஒளி மற்றும் தட்பவெப்ப எதிர்ப்பு', 'நீர் வடியும் துளைகளுடன் அமைப்பு', 'வேர் தாங்கும் உறுதி']

@@ -46,7 +46,7 @@ export const MACHINES = [
     shortName: 'Marshal 6-Colour Anilox (2018)',
     category: 'printing',
     modelYear: '2018 Model',
-    image: '/images/flexo_machine.jpg',
+    image: '/images/marshal_six_color.jpg',
     suppliedSpecs: {
       en: [
         'Marshal Engineering Platform',
@@ -79,7 +79,7 @@ export const MACHINES = [
     shortName: 'PP Conversion (2.5" – 18")',
     category: 'conversion',
     modelYear: 'Conversion Line',
-    image: '/images/factory.jpg',
+    image: '/images/pp_conversion_machine.jpg',
     suppliedSpecs: {
       en: [
         'Dedicated Polypropylene Film Processing',
@@ -110,7 +110,7 @@ export const MACHINES = [
     shortName: 'HM / HDPE / LDPE / LLDPE Line',
     category: 'conversion',
     modelYear: 'Multi-Polymer Line',
-    image: '/images/factory.jpg',
+    image: '/images/pe_conversion_machine.jpg',
     suppliedSpecs: {
       en: [
         'Supplied Materials: HM / HDPE (High Molecular / High Density)',
@@ -172,7 +172,7 @@ export const MACHINES = [
     shortName: 'Side-Sealing Line',
     category: 'sealing',
     modelYear: 'Automated Unit',
-    image: '/images/bag_sealing_machine.jpg',
+    image: '/images/side_sealing_machine.jpg',
     suppliedSpecs: {
       en: [
         'Automatic Side Sealing & Precision Cutting',

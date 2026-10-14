@@ -36,7 +36,7 @@ export default function Home() {
       id: 'grocery-bags',
       title: lang === 'ta' ? 'மளிகை & கேரி பைகள்' : 'Grocery & Carry Bags',
       desc: lang === 'ta' ? 'அதிக சுமை தாங்கும் சில்லறை வணிக பைகள் மற்றும் பாலி பேக்கேஜிங்.' : 'High tensile strength retail carry bags and wholesale grocery poly packs.',
-      image: '/images/pp_bags.jpg',
+      image: '/images/grocery_carry_bags.jpg',
       categoryQuery: 'bags_general',
       tags: ['Retail', 'Supermarkets', 'HM / HDPE']
     },
@@ -60,7 +60,7 @@ export default function Home() {
       id: 'agricultural-packaging',
       title: lang === 'ta' ? 'விவசாய & நர்சரி பேக்கேஜிங்' : 'Agricultural & Nursery Packaging',
       desc: lang === 'ta' ? 'நாற்று வளர்ப்பு மற்றும் தாவரங்களுக்கான UV-பாதுகாக்கப்பட்ட கவர்கள்.' : 'UV-stabilized poly covers and nursery bags for saplings and cultivation.',
-      image: '/images/industrial_packaging.jpg',
+      image: '/images/nursery_plant_bags.jpg',
       categoryQuery: 'industrial_consumer',
       tags: ['Nursery', 'Tree Covers', 'UV-Stabilized']
     },
@@ -68,7 +68,7 @@ export default function Home() {
       id: 'general-covers',
       title: lang === 'ta' ? 'பொது பேக்கேஜிங் & தரை விரிப்புகள்' : 'General Covers & Floor Protection',
       desc: lang === 'ta' ? 'பல்வேறு வணிக பயன்பாடுகள் மற்றும் தரை பாதுகாப்பு தாள்கள்.' : 'General-purpose poly covers and heavy-gauge surface shielding films.',
-      image: '/images/pp_bags.jpg',
+      image: '/images/floor_protection_covers.jpg',
       categoryQuery: 'bags_general',
       tags: ['Floor Shield', 'Apparel', 'Shipping']
     }
