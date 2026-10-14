@@ -235,7 +235,7 @@ export default function Header() {
             <img
               src={COMPANY_INFO.logo}
               alt="Surya Poly Pack Logo"
-              className="h-11 sm:h-13 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+              className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-[1.02]"
             />
           </Link>
 
