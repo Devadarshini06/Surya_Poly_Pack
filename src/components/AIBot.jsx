@@ -19,9 +19,56 @@ import {
   findBotResponse 
 } from '../data/botKnowledge';
 
+/**
+ * Format markdown bold **text** and bullet lines cleanly in chat bubbles
+ */
+function formatBotMessage(text) {
+  if (!text) return null;
+  const lines = text.split('\n');
+
+  return lines.map((line, lineIdx) => {
+    // Parse **bold** markdown segments
+    const parts = line.split(/(\*\*[^*]+\*\*)/g);
+    const formattedLine = parts.map((part, partIdx) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return (
+          <strong key={partIdx} className="font-bold text-[#0B2B22]">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      return part;
+    });
+
+    return (
+      <React.Fragment key={lineIdx}>
+        {lineIdx > 0 && <span className="block h-1.5" />}
+        <span>{formattedLine}</span>
+      </React.Fragment>
+    );
+  });
+}
+
+// Key curated FAQ topics to showcase as quick chips
+const TOPIC_CHIP_IDS = [
+  'products',
+  'food_packaging',
+  'calendar_covers',
+  'pouches',
+  'printing',
+  'materials',
+  'pricing',
+  'moq',
+  'order_process',
+  'samples',
+  'delivery',
+  'location',
+  'contact'
+];
+
 export default function AIBot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState(null); // 'en' | 'ta' | null (null means must select first!)
+  const [selectedLang, setSelectedLang] = useState(null); // 'en' | 'ta' | null (must select first)
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -83,7 +130,7 @@ export default function AIBot() {
   };
 
   // Send message and get AI response
-  const handleSendMessage = (textToSend = null) => {
+  const handleSendMessage = (textToSend = null, explicitTopicId = null) => {
     const query = (textToSend || inputValue).trim();
     if (!query) return;
 
@@ -98,21 +145,36 @@ export default function AIBot() {
     if (!textToSend) setInputValue('');
     setIsTyping(true);
 
-    // Simulate AI thinking delay for natural conversational feel
+    // Natural brief delay for conversational response
     setTimeout(() => {
-      const match = findBotResponse(query, selectedLang || 'en');
+      let botText = '';
+      let hasWhatsAppCTA = true;
+
+      if (explicitTopicId) {
+        const topic = FAQ_TOPICS.find(t => t.id === explicitTopicId);
+        if (topic) {
+          botText = (selectedLang === 'ta') ? topic.responseTa : topic.responseEn;
+        }
+      }
+
+      if (!botText) {
+        const match = findBotResponse(query, selectedLang || 'en');
+        botText = match.text;
+        hasWhatsAppCTA = match.hasWhatsAppCTA;
+      }
+
       const botMessage = {
         id: getNextId(),
         sender: 'bot',
-        text: match.text,
-        hasWhatsAppCTA: match.hasWhatsAppCTA,
+        text: botText,
+        hasWhatsAppCTA,
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         showChips: true
       };
 
       setMessages(prev => [...prev, botMessage]);
       setIsTyping(false);
-    }, 450);
+    }, 400);
   };
 
   const handleKeyDown = (e) => {
@@ -121,6 +183,8 @@ export default function AIBot() {
       handleSendMessage();
     }
   };
+
+  const activeChips = FAQ_TOPICS.filter(t => TOPIC_CHIP_IDS.includes(t.id));
 
   return (
     <>
@@ -168,7 +232,7 @@ export default function AIBot() {
       {isOpen && (
         <aside 
           aria-label="Surya Poly Pack AI Chat Assistant"
-          className="fixed bottom-6 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[410px] h-[560px] max-h-[85vh] bg-[#FAF8F2] border border-[#E4DED1] rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 font-sans"
+          className="fixed bottom-6 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[420px] h-[580px] max-h-[85vh] bg-[#FAF8F2] border border-[#E4DED1] rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 font-sans"
         >
           {/* Header Bar */}
           <div className="bg-[#0B2B22] text-[#FAF8F2] p-3.5 sm:p-4 flex items-center justify-between border-b border-[#C99A42]/30 shrink-0">
@@ -177,7 +241,7 @@ export default function AIBot() {
                 <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#102F26] to-[#0B2B22] border border-[#C99A42]/50 flex items-center justify-center text-[#C99A42] shadow-inner">
                   <Bot className="w-6 h-6" />
                 </div>
-                {/* Online pulse */}
+                {/* Online status indicator */}
                 <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#25D366] border-2 border-[#0B2B22]"></span>
               </div>
               
@@ -297,18 +361,18 @@ export default function AIBot() {
                     </div>
                   )}
 
-                  <div className={`max-w-[85%] space-y-1.5 ${isBot ? 'items-start' : 'items-end'}`}>
+                  <div className={`max-w-[88%] space-y-1.5 ${isBot ? 'items-start' : 'items-end'}`}>
                     <div
-                      className={`p-3.5 rounded-2xl leading-relaxed whitespace-pre-wrap ${
+                      className={`p-3.5 rounded-2xl leading-relaxed ${
                         isBot
                           ? 'bg-white text-[#27312D] border border-[#E4DED1] shadow-xs rounded-tl-sm'
-                          : 'bg-[#0B2B22] text-[#FAF8F2] shadow-sm rounded-tr-sm'
+                          : 'bg-[#0B2B22] text-[#FAF8F2] shadow-sm rounded-tr-sm whitespace-pre-wrap'
                       }`}
                     >
-                      {msg.text}
+                      {isBot ? formatBotMessage(msg.text) : msg.text}
                     </div>
 
-                    {/* WhatsApp CTA Action Buttons inside bot replies */}
+                    {/* Dual WhatsApp CTA Action Buttons inside bot replies */}
                     {isBot && msg.hasWhatsAppCTA && (
                       <div className="p-2.5 rounded-xl bg-white border border-[#E4DED1] space-y-1.5 shadow-2xs">
                         <div className="text-[10px] font-bold text-[#58615B] uppercase tracking-wider">
@@ -372,15 +436,15 @@ export default function AIBot() {
                   <MessageSquare className="w-3 h-3 text-[#C99A42]" />
                   <span>{selectedLang === 'ta' ? 'அடிக்கடி கேட்கப்படும் கேள்விகள்:' : 'Suggested Questions:'}</span>
                 </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {FAQ_TOPICS.map((topic) => {
+                <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto pr-1">
+                  {activeChips.map((topic) => {
                     const label = selectedLang === 'ta' ? topic.chipTa : topic.chipEn;
                     return (
                       <button
                         key={topic.id}
                         type="button"
-                        onClick={() => handleSendMessage(label)}
-                        className="px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#F1EBDD] text-[#0B2B22] hover:text-[#0B2B22] border border-[#E4DED1] hover:border-[#0B2B22]/30 font-semibold text-[11px] transition shadow-2xs cursor-pointer text-left"
+                        onClick={() => handleSendMessage(label, topic.id)}
+                        className="px-2.5 py-1.5 rounded-xl bg-white hover:bg-[#F1EBDD] text-[#0B2B22] border border-[#E4DED1] hover:border-[#0B2B22]/30 font-semibold text-[11px] transition shadow-2xs cursor-pointer text-left shrink-0"
                       >
                         {label}
                       </button>
@@ -412,7 +476,7 @@ export default function AIBot() {
                   placeholder={
                     selectedLang === 'ta' 
                       ? 'உங்கள் கேள்வியை இங்கே தட்டச்சு செய்க...' 
-                      : 'Ask a question about packaging, quotes...'
+                      : 'Ask about packaging, quotes, flexo printing...'
                   }
                   className="flex-1 px-3.5 py-2.5 bg-[#FAF8F2] border border-[#E4DED1] rounded-xl text-xs text-[#27312D] placeholder-[#58615B] focus:outline-hidden focus:border-[#0B2B22] focus:ring-1 focus:ring-[#0B2B22] transition"
                 />
