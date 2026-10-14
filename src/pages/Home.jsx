@@ -508,27 +508,38 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4 text-[#C99A42]" />
               </Link>
               
-              <a
-                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md hover:bg-[#20ba59] transition active:scale-98"
-                title={`WhatsApp: ${COMPANY_INFO.phone.primary}`}
-              >
-                <WhatsAppIcon className="w-4 h-4 text-white fill-white" />
-                <span>{t.cta.btnWhatsapp} ({COMPANY_INFO.phone.primary.replace('+91 ', '')})</span>
-              </a>
-
-              <a
-                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md hover:bg-[#20ba59] transition active:scale-98"
-                title={`WhatsApp: ${COMPANY_INFO.phone.secondary}`}
-              >
-                <WhatsAppIcon className="w-4 h-4 text-white fill-white" />
-                <span>{t.cta.btnWhatsapp} ({COMPANY_INFO.phone.secondary.replace('+91 ', '')})</span>
-              </a>
+              <div className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md shadow-[#25D366]/25 border border-white/20 select-none">
+                <a
+                  href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:opacity-95"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-white fill-white shrink-0" />
+                  <span>{t.cta.btnWhatsapp}</span>
+                </a>
+                <span className="text-white/80 font-normal">(</span>
+                <a
+                  href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline transition"
+                  title={`WhatsApp: ${COMPANY_INFO.phone.primary}`}
+                >
+                  {COMPANY_INFO.phone.primary.replace('+91 ', '')}
+                </a>
+                <span className="text-white/60 font-normal">/</span>
+                <a
+                  href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline transition"
+                  title={`WhatsApp: ${COMPANY_INFO.phone.secondary}`}
+                >
+                  {COMPANY_INFO.phone.secondary.replace('+91 ', '')}
+                </a>
+                <span className="text-white/80 font-normal">)</span>
+              </div>
             </div>
           </div>
         </div>
