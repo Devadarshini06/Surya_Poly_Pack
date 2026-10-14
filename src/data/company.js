@@ -30,7 +30,11 @@ export const COMPANY_INFO = {
     isPlaceholder: false
   },
   whatsapp: {
-    number: "919786678966",
+    primary: "+91 97866 78966",
+    primaryRaw: "919786678966",
+    secondary: "+91 99434 66006",
+    secondaryRaw: "919943466006",
+    number: "919786678966", // fallback compatibility
     defaultMessageEn: "Hello Surya Poly Pack, I am interested in custom packaging solutions. Please share product details and quote.",
     defaultMessageTa: "வணக்கம் சூர்யா பாலி பேக், எனக்கு தனிப்பயன் பேக்கேஜிங் தேவைப்படுகிறது. விவரங்களையும் விலைக் குறிப்பையும் பகிரவும்.",
     isPlaceholder: false
@@ -85,8 +89,8 @@ export const COMPANY_INFO = {
 /**
  * Helper to construct WhatsApp click-to-chat URL
  */
-export function getWhatsAppUrl(customMessage = null, lang = 'en') {
-  const number = COMPANY_INFO.whatsapp.number;
+export function getWhatsAppUrl(customMessage = null, lang = 'en', targetNumber = null) {
+  const number = targetNumber || COMPANY_INFO.whatsapp.primaryRaw;
   const message = customMessage || (lang === 'ta' ? COMPANY_INFO.whatsapp.defaultMessageTa : COMPANY_INFO.whatsapp.defaultMessageEn);
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }

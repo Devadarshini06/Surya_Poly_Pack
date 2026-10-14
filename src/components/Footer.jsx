@@ -49,15 +49,26 @@ export default function Footer() {
               {t.footer.companyDesc}
             </p>
 
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex flex-wrap items-center gap-2">
               <a
-                href={getWhatsAppUrl(null, lang)}
+                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 text-xs font-semibold transition border border-[#25D366]/30"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 text-xs font-semibold transition border border-[#25D366]/30"
+                title="WhatsApp Primary Number"
               >
-                <WhatsAppIcon className="w-3.5 h-3.5" />
-                <span>WhatsApp Enquiry</span>
+                <WhatsAppIcon className="w-3.5 h-3.5 fill-current text-current" />
+                <span>{COMPANY_INFO.phone.primary}</span>
+              </a>
+              <a
+                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 text-xs font-semibold transition border border-[#25D366]/30"
+                title="WhatsApp Secondary Number"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 fill-current text-current" />
+                <span>{COMPANY_INFO.phone.secondary}</span>
               </a>
             </div>
           </div>
@@ -135,6 +146,18 @@ export default function Footer() {
                   </a>
                   <span className="text-white/40">/</span>
                   <a href={`tel:${COMPANY_INFO.phone.secondaryRaw}`} className="hover:text-white transition">
+                    {COMPANY_INFO.phone.secondary}
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] fill-[#25D366] shrink-0" />
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <a href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)} target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition">
+                    {COMPANY_INFO.phone.primary}
+                  </a>
+                  <span className="text-white/40">/</span>
+                  <a href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)} target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition">
                     {COMPANY_INFO.phone.secondary}
                   </a>
                 </div>

@@ -4,6 +4,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import AIBot from './components/AIBot';
 
 // Pages
 import Home from './pages/Home';
@@ -52,7 +53,8 @@ function MainLayout() {
       {/* Global Corporate Footer */}
       <Footer />
 
-      {/* Floating WhatsApp Action Button */}
+      {/* Floating AI Assistant & WhatsApp Action Buttons */}
+      <AIBot />
       <WhatsAppButton />
     </div>
   );

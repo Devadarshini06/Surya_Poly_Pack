@@ -15,7 +15,7 @@ import {
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { MACHINES } from '../data/machines';
-import { getWhatsAppUrl } from '../data/company';
+import { COMPANY_INFO, getWhatsAppUrl } from '../data/company';
 import SectionHeading from '../components/SectionHeading';
 import SEO from '../components/SEO';
 
@@ -509,13 +509,25 @@ export default function Home() {
               </Link>
               
               <a
-                href={getWhatsAppUrl(null, lang)}
+                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md hover:bg-[#20ba59] transition active:scale-98"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md hover:bg-[#20ba59] transition active:scale-98"
+                title={`WhatsApp: ${COMPANY_INFO.phone.primary}`}
               >
                 <WhatsAppIcon className="w-4 h-4 text-white fill-white" />
-                <span>{t.cta.btnWhatsapp}</span>
+                <span>{t.cta.btnWhatsapp} ({COMPANY_INFO.phone.primary.replace('+91 ', '')})</span>
+              </a>
+
+              <a
+                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md hover:bg-[#20ba59] transition active:scale-98"
+                title={`WhatsApp: ${COMPANY_INFO.phone.secondary}`}
+              >
+                <WhatsAppIcon className="w-4 h-4 text-white fill-white" />
+                <span>{t.cta.btnWhatsapp} ({COMPANY_INFO.phone.secondary.replace('+91 ', '')})</span>
               </a>
             </div>
           </div>

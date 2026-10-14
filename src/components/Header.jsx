@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { COMPANY_INFO } from '../data/company';
+import { COMPANY_INFO, getWhatsAppUrl } from '../data/company';
 import LanguageSwitcher from './LanguageSwitcher';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -149,13 +150,15 @@ export default function Header() {
             </span>
           </div>
 
-          {/* Right: Phone Numbers, Email & Language Switcher */}
+          {/* Right: Phone Numbers, WhatsApp, Email & Language Switcher */}
           <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs shrink-0">
+            {/* Phone Call: Phone Symbol and 2 Numbers */}
             <div className="flex items-center gap-1.5 font-medium">
               <Phone className="w-3.5 h-3.5 text-[#C99A42] shrink-0" />
               <a 
                 href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
                 className="text-[#FAF8F2] hover:text-[#C99A42] transition"
+                title="Call Primary Number"
               >
                 {COMPANY_INFO.phone.primary}
               </a>
@@ -163,6 +166,33 @@ export default function Header() {
               <a 
                 href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
                 className="hidden sm:inline text-[#FAF8F2] hover:text-[#C99A42] transition"
+                title="Call Secondary Number"
+              >
+                {COMPANY_INFO.phone.secondary}
+              </a>
+            </div>
+
+            <span className="hidden lg:inline text-white/20">|</span>
+
+            {/* WhatsApp: WhatsApp Symbol and 2 Numbers */}
+            <div className="hidden lg:flex items-center gap-1.5 font-medium">
+              <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] fill-[#25D366] shrink-0" />
+              <a 
+                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#FAF8F2] hover:text-[#25D366] transition"
+                title="WhatsApp Primary Number"
+              >
+                {COMPANY_INFO.phone.primary}
+              </a>
+              <span className="text-white/20 hidden sm:inline">/</span>
+              <a 
+                href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline text-[#FAF8F2] hover:text-[#25D366] transition"
+                title="WhatsApp Secondary Number"
               >
                 {COMPANY_INFO.phone.secondary}
               </a>
@@ -289,8 +319,19 @@ export default function Header() {
               >
                 {t.nav.getQuote}
               </Link>
-              <div className="text-xs text-[#58615B] text-center pt-1 font-medium space-y-1">
-                <div>📞 {COMPANY_INFO.phone.primary} / {COMPANY_INFO.phone.secondary}</div>
+              <div className="text-xs text-[#58615B] text-center pt-1 font-medium space-y-1.5">
+                <div className="flex items-center justify-center gap-1.5 flex-wrap">
+                  <span>📞</span>
+                  <a href={`tel:${COMPANY_INFO.phone.primaryRaw}`} className="text-[#0B2B22] font-bold hover:underline">{COMPANY_INFO.phone.primary}</a>
+                  <span>/</span>
+                  <a href={`tel:${COMPANY_INFO.phone.secondaryRaw}`} className="text-[#0B2B22] font-bold hover:underline">{COMPANY_INFO.phone.secondary}</a>
+                </div>
+                <div className="flex items-center justify-center gap-1.5 flex-wrap">
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366] fill-[#25D366]" />
+                  <a href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)} target="_blank" rel="noopener noreferrer" className="text-[#0B2B22] font-bold hover:text-[#25D366]">{COMPANY_INFO.phone.primary}</a>
+                  <span>/</span>
+                  <a href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)} target="_blank" rel="noopener noreferrer" className="text-[#0B2B22] font-bold hover:text-[#25D366]">{COMPANY_INFO.phone.secondary}</a>
+                </div>
                 <div>✉️ {COMPANY_INFO.email.sales}</div>
               </div>
             </div>

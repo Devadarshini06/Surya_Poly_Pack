@@ -74,7 +74,7 @@ export default function Contact() {
                     <div className="text-xs font-bold uppercase tracking-wider text-[#3D4744]">
                       {t.contactPage.phoneLabel}
                     </div>
-                    <div className="space-y-1.5 pt-0.5">
+                    <div className="space-y-2 pt-0.5">
                       <div className="flex flex-wrap items-center gap-2">
                         <a 
                           href={`tel:${COMPANY_INFO.phone.primaryRaw}`}
@@ -82,17 +82,31 @@ export default function Contact() {
                         >
                           {COMPANY_INFO.phone.primary}
                         </a>
-                        <span className="text-[11px] px-2 py-0.5 rounded-md bg-[#25D366]/15 text-[#25D366] font-bold inline-flex items-center gap-1">
-                          <WhatsAppIcon className="w-3 h-3 text-[#25D366]" />
+                        <a
+                          href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] px-2 py-0.5 rounded-md bg-[#25D366]/15 hover:bg-[#25D366] text-[#1fad53] hover:text-white transition font-bold inline-flex items-center gap-1"
+                        >
+                          <WhatsAppIcon className="w-3 h-3 fill-current text-current" />
                           WhatsApp
-                        </span>
+                        </a>
                       </div>
-                      <div>
+                      <div className="flex flex-wrap items-center gap-2">
                         <a 
                           href={`tel:${COMPANY_INFO.phone.secondaryRaw}`}
-                          className="font-bold text-base text-[#0E2922] hover:text-[#C8943D] transition block"
+                          className="font-bold text-base text-[#0E2922] hover:text-[#C8943D] transition"
                         >
                           {COMPANY_INFO.phone.secondary}
+                        </a>
+                        <a
+                          href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] px-2 py-0.5 rounded-md bg-[#25D366]/15 hover:bg-[#25D366] text-[#1fad53] hover:text-white transition font-bold inline-flex items-center gap-1"
+                        >
+                          <WhatsAppIcon className="w-3 h-3 fill-current text-current" />
+                          WhatsApp
                         </a>
                       </div>
                     </div>
@@ -149,17 +163,31 @@ export default function Contact() {
 
               </div>
 
-              {/* WhatsApp Quick Action Button */}
-              <div className="pt-4 border-t border-[#E2DDD2]">
-                <a
-                  href={getWhatsAppUrl(null, lang)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-sm shadow-md transition"
-                >
-                  <WhatsAppIcon className="w-5 h-5 text-white fill-white" />
-                  <span>{t.contactPage.whatsappBtn}</span>
-                </a>
+              {/* WhatsApp Quick Action Buttons for Both Numbers */}
+              <div className="pt-4 border-t border-[#E2DDD2] space-y-2">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#3D4744]">
+                  {lang === 'ta' ? 'வாட்ஸ்அப் உடனடி தொடர்பு' : 'Direct WhatsApp Chat'}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <a
+                    href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs shadow-md transition"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 text-white fill-white shrink-0" />
+                    <span className="truncate">{COMPANY_INFO.phone.primary}</span>
+                  </a>
+                  <a
+                    href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.secondaryRaw)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs shadow-md transition"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 text-white fill-white shrink-0" />
+                    <span className="truncate">{COMPANY_INFO.phone.secondary}</span>
+                  </a>
+                </div>
               </div>
             </div>
 
