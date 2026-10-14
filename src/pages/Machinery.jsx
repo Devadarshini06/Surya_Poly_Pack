@@ -29,7 +29,12 @@ export default function Machinery() {
       />
 
       {/* Hero Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="machinery-hero" 
+        data-section-en="Machinery & Transparency" 
+        data-section-ta="இயந்திரங்கள் கண்ணோட்டம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-6">
           <SectionHeading
             badge={t.machineryPage.badge}
@@ -53,7 +58,12 @@ export default function Machinery() {
       </section>
 
       {/* Filter Tabs & Machinery Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
+      <section 
+        id="machinery-fleet" 
+        data-section-en="Machinery Fleet" 
+        data-section-ta="இயந்திரங்கள் பட்டியல்"
+        className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8"
+      >
         <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2]">
           {categories.map(cat => (
             <button
@@ -78,7 +88,12 @@ export default function Machinery() {
       </section>
 
       {/* Flexographic Printing Technology & Process Section */}
-      <section className="bg-[#0B201A] text-white py-16 sm:py-20 border-y border-[#C8943D]/20">
+      <section 
+        id="machinery-process" 
+        data-section-en="Flexo Printing Process" 
+        data-section-ta="அச்சிடும் முறை வழிகாட்டி"
+        className="bg-[#0B201A] text-white py-16 sm:py-20 border-y border-[#C8943D]/20"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
           
           <div className="max-w-3xl space-y-3">
@@ -116,7 +131,12 @@ export default function Machinery() {
       </section>
 
       {/* Polymer Film Conversion Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="machinery-substrates" 
+        data-section-en="Polymer Substrates" 
+        data-section-ta="மூலப்பொருள் செயலாக்கம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="bg-white rounded-3xl border border-[#E2DDD2] p-8 sm:p-12 shadow-sm space-y-6">
           <SectionHeading
             badge={lang === 'ta' ? 'மூலப்பொருள் செயலாக்கம்' : 'Polymer Substrates'}

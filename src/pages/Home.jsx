@@ -91,7 +91,12 @@ export default function Home() {
       />
 
       {/* SECTION A: HERO */}
-      <section className="relative overflow-hidden pt-8 pb-16 lg:py-20 bg-gradient-to-b from-[#F1EBDD]/50 via-[#FAF8F2] to-[#FAF8F2]">
+      <section 
+        id="hero" 
+        data-section-en="Home" 
+        data-section-ta="முகப்பு"
+        className="relative overflow-hidden pt-8 pb-16 lg:py-20 bg-gradient-to-b from-[#F1EBDD]/50 via-[#FAF8F2] to-[#FAF8F2]"
+      >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             
@@ -181,7 +186,12 @@ export default function Home() {
 
 
       {/* SECTION B: COMPANY INTRODUCTION */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-8">
+      <section 
+        id="about" 
+        data-section-en="About Us" 
+        data-section-ta="எங்களைப் பற்றி"
+        className="max-w-[1400px] mx-auto px-4 sm:px-8"
+      >
         <div className="bg-white rounded-3xl border border-[#E4DED1] p-8 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
@@ -252,7 +262,12 @@ export default function Home() {
 
 
       {/* SECTION C: FEATURED PRODUCT CATEGORIES */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-10">
+      <section 
+        id="products" 
+        data-section-en="Featured Products" 
+        data-section-ta="முக்கிய தயாரிப்புகள்"
+        className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-10"
+      >
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <SectionHeading
             badge={t.featuredCategories.badge}
@@ -317,7 +332,12 @@ export default function Home() {
 
 
       {/* SECTION D: MANUFACTURING CAPABILITIES */}
-      <section className="bg-[#0B2B22] text-white py-16 sm:py-20 border-y border-[#102F26]">
+      <section 
+        id="capabilities" 
+        data-section-en="Manufacturing Capabilities" 
+        data-section-ta="உற்பத்தி திறன்கள்"
+        className="bg-[#0B2B22] text-white py-16 sm:py-20 border-y border-[#102F26]"
+      >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-12">
           <SectionHeading
             badge={t.capabilities.badge}
@@ -352,7 +372,12 @@ export default function Home() {
 
 
       {/* SECTION E: MACHINERY HIGHLIGHTS */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-10">
+      <section 
+        id="machinery" 
+        data-section-en="Machinery Highlights" 
+        data-section-ta="நவீன இயந்திரங்கள்"
+        className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-10"
+      >
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <SectionHeading
             badge={t.machinerySection.badge}
@@ -424,7 +449,12 @@ export default function Home() {
 
 
       {/* SECTION F: WHY CHOOSE US */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-10">
+      <section 
+        id="why-us" 
+        data-section-en="Why Choose Us" 
+        data-section-ta="ஏன் எங்களை தேர்வு செய்ய வேண்டும்"
+        className="max-w-[1400px] mx-auto px-4 sm:px-8 space-y-10"
+      >
         <SectionHeading
           badge={t.whyUs.badge}
           title={t.whyUs.title}
@@ -454,7 +484,12 @@ export default function Home() {
 
 
       {/* SECTION G: CALL TO ACTION BANNER */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-8">
+      <section 
+        id="contact" 
+        data-section-en="Contact & Enquiry" 
+        data-section-ta="தொடர்புக்கு & விசாரணை"
+        className="max-w-[1400px] mx-auto px-4 sm:px-8"
+      >
         <div className="rounded-3xl bg-gradient-to-br from-[#0B2B22] via-[#102F26] to-[#071E18] text-white p-8 sm:p-14 shadow-xl relative overflow-hidden border border-[#C99A42]/30">
           <div className="relative z-10 max-w-2xl space-y-5">
             <h2 className="text-2xl sm:text-4xl font-extrabold font-['Outfit',sans-serif] tracking-tight text-white">

@@ -45,7 +45,12 @@ export default function About() {
       />
 
       {/* Hero Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="about-hero" 
+        data-section-en="About Us Overview" 
+        data-section-ta="எங்களைப் பற்றி கண்ணோட்டம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] relative overflow-hidden">
           <SectionHeading
             badge={t.aboutPage.badge}
@@ -56,7 +61,12 @@ export default function About() {
       </section>
 
       {/* Main Profile Story */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="about-story" 
+        data-section-en="Story & Mission" 
+        data-section-ta="எங்கள் வரலாறு & நோக்கம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           <div className="lg:col-span-7 space-y-5">
@@ -100,7 +110,12 @@ export default function About() {
       </section>
 
       {/* Pillars of Manufacturing */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10">
+      <section 
+        id="about-principles" 
+        data-section-en="Manufacturing Principles" 
+        data-section-ta="உற்பத்தி அணுகுமுறை"
+        className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10"
+      >
         <SectionHeading
           badge={lang === 'ta' ? 'எங்கள் அணுகுமுறை' : 'Core Principles'}
           title={lang === 'ta' ? 'உற்பத்தி மற்றும் தர உறுதிப்பாடு' : 'Our Manufacturing Approach'}
@@ -131,7 +146,12 @@ export default function About() {
       </section>
 
       {/* Applications We Serve */}
-      <section className="bg-white py-14 border-y border-[#E2DDD2]">
+      <section 
+        id="about-applications" 
+        data-section-en="Applications We Serve" 
+        data-section-ta="பயன்பாடுகள்"
+        className="bg-white py-14 border-y border-[#E2DDD2]"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
           <SectionHeading
             badge={lang === 'ta' ? 'பயன்பாடுகள்' : 'Applications'}
@@ -154,7 +174,12 @@ export default function About() {
       </section>
 
       {/* CTA Box */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="about-cta" 
+        data-section-en="Discuss Order" 
+        data-section-ta="ஆர்டர் விவாதம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="rounded-3xl bg-gradient-to-br from-[#0E2922] via-[#163D32] to-[#0B201A] border border-[#C8943D]/30 text-white p-8 sm:p-12 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
             <h3 className="text-2xl font-extrabold font-['Outfit',sans-serif] text-[#FAF8F3]">

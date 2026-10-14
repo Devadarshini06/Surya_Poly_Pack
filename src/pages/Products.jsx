@@ -56,7 +56,12 @@ export default function Products() {
       />
 
       {/* Page Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="products-hero" 
+        data-section-en="Product Range & Standards" 
+        data-section-ta="தயாரிப்பு கண்ணோட்டம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2]">
           <SectionHeading
             badge={t.productsPage.badge}
@@ -75,7 +80,12 @@ export default function Products() {
       </section>
 
       {/* Controls: Search Bar & Category Filters */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
+      <section 
+        id="products-filter" 
+        data-section-en="Filter & Search" 
+        data-section-ta="வடிகட்டி மற்றும் தேடல்"
+        className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6"
+      >
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
           
           {/* Category Filter Tabs */}
@@ -138,7 +148,12 @@ export default function Products() {
       </section>
 
       {/* Product Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="products-catalogue" 
+        data-section-en="Product Catalogue" 
+        data-section-ta="தயாரிப்பு பட்டியல்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map(product => (

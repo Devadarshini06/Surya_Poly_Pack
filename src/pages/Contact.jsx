@@ -31,7 +31,12 @@ export default function Contact() {
       />
 
       {/* Hero Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="contact-hero" 
+        data-section-en="Contact Overview" 
+        data-section-ta="தொடர்பு கண்ணோட்டம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-4">
           <SectionHeading
             badge={t.contactPage.badge}
@@ -42,7 +47,12 @@ export default function Contact() {
       </section>
 
       {/* Contact Grid: Details on Left, Enquiry Form on Right */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="contact-details" 
+        data-section-en="Enquiry & Facility Details" 
+        data-section-ta="விசாரணை & ஆலை விவரங்கள்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
           {/* Left Column: Contact Cards & Info */}

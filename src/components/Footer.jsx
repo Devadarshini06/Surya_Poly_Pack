@@ -22,7 +22,12 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0B2B22] text-[#FAF8F2] pt-16 pb-10 border-t border-[#102F26]">
+    <footer 
+      id="footer" 
+      data-section-en="Footer & Company Info" 
+      data-section-ta="நிறுவன விவரங்கள்"
+      className="bg-[#0B2B22] text-[#FAF8F2] pt-16 pb-10 border-t border-[#102F26]"
+    >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
         
         {/* Main 4-column Grid */}

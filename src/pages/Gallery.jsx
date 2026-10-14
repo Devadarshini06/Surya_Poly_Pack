@@ -45,7 +45,12 @@ export default function Gallery() {
       />
 
       {/* Hero Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section 
+        id="gallery-hero" 
+        data-section-en="Gallery Overview" 
+        data-section-ta="புகைப்படங்கள் கண்ணோட்டம்"
+        className="max-w-7xl mx-auto px-4 sm:px-8"
+      >
         <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-4">
           <SectionHeading
             badge={t.galleryPage.badge}
@@ -59,7 +64,12 @@ export default function Gallery() {
       </section>
 
       {/* Category Filter Tabs */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
+      <section 
+        id="gallery-grid" 
+        data-section-en="Visual Showcase" 
+        data-section-ta="புகைப்பட தொகுப்பு"
+        className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8"
+      >
         <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2]">
           {GALLERY_CATEGORIES.map(cat => (
             <button
