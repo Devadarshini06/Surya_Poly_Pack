@@ -303,7 +303,6 @@ export const en = {
     address: "Factory & Office",
     hours: "Hours",
     copyright: "All rights reserved. Surya Poly Pack.",
-    disclaimer: "Frontend demonstration build. Official company assets and verified specifications subject to updates.",
     backToTop: "Back to Top"
   },
 

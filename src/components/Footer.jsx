@@ -180,7 +180,6 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F3EFE6]/60 gap-4">
           <p>© {new Date().getFullYear()} {t.footer.copyright}</p>
           <div className="flex items-center gap-4">
-            <span className="hidden md:inline">{t.footer.disclaimer}</span>
             <button
               onClick={scrollToTop}
               className="p-2.5 rounded-lg bg-white/10 hover:bg-[#1C473A] text-white transition flex items-center gap-1.5 cursor-pointer"
