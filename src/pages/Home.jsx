@@ -86,7 +86,6 @@ export default function Home() {
   return (
     <div className="space-y-20 sm:space-y-28 pb-16">
       <SEO 
-        title={t.hero.headline}
         description={t.hero.description}
       />
 
