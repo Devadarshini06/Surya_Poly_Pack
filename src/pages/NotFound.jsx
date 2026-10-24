@@ -28,10 +28,10 @@ export default function NotFound() {
           </p>
         </div>
 
-        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
           <Link
             to="/"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs font-bold shadow-md transition"
+            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs font-bold shadow-md transition"
           >
             <Home className="w-4 h-4 text-[#C8943D]" />
             <span>{t.notFound.btnHome}</span>
@@ -39,7 +39,7 @@ export default function NotFound() {
 
           <Link
             to="/products"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-white border border-[#E2DDD2] hover:bg-[#F3EFE6] text-[#0E2922] text-xs font-bold transition"
+            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-white border border-[#E2DDD2] hover:bg-[#F3EFE6] text-[#0E2922] text-xs font-bold transition"
           >
             <Package className="w-4 h-4 text-[#C8943D]" />
             <span>{t.notFound.btnProducts}</span>

@@ -177,7 +177,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F3EFE6]/60 gap-4 text-center sm:text-left">
+        <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-[#F3EFE6]/60 gap-4">
           <p>© {new Date().getFullYear()} {t.footer.copyright}</p>
           <div className="flex items-center gap-4">
             <button

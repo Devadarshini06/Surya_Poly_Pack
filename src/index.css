@@ -120,9 +120,10 @@ html[lang="ta"] .tracking-widest {
   letter-spacing: 0 !important;
 }
 
-/* Vertical optical baseline adjustments for Tamil text inside flex containers & buttons */
-html[lang="ta"] .inline-flex,
-html[lang="ta"] .flex {
+/* Vertical optical baseline adjustments for Tamil text inside inline-flex badges and buttons */
+html[lang="ta"] button.inline-flex,
+html[lang="ta"] a.inline-flex,
+html[lang="ta"] .inline-flex {
   align-items: center;
 }
 

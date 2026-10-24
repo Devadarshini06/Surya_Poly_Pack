@@ -169,11 +169,11 @@ export default function EnquiryForm({ initialProductId = '' }) {
             </div>
           )}
 
-          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
             <button
               type="button"
               onClick={handleReset}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#0E2922] text-[#FAF8F3] text-xs font-bold shadow-md hover:bg-[#1C473A] transition cursor-pointer border border-[#C8943D]/30 text-center"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0E2922] text-[#FAF8F3] text-xs font-bold shadow-md hover:bg-[#1C473A] transition cursor-pointer border border-[#C8943D]/30"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>{t.contactPage.btnDismiss}</span>
@@ -182,7 +182,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
               href={getWhatsAppUrl(`Hello Surya Poly Pack, I submitted an enquiry for ${submittedData?.product || 'packaging'}.`, lang)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-md hover:bg-[#20ba59] transition text-center"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-md hover:bg-[#20ba59] transition"
             >
               <WhatsAppIcon className="w-3.5 h-3.5 text-white fill-white" />
               <span>WhatsApp Direct</span>
@@ -355,7 +355,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-sm font-bold shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg disabled:opacity-50 cursor-pointer border border-[#C8943D]/30"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-sm font-bold shadow-md shadow-[#0E2922]/20 transition hover:shadow-lg disabled:opacity-50 cursor-pointer border border-[#C8943D]/30"
             >
               <Send className="w-4 h-4 text-[#C8943D]" />
               <span>{isSubmitting ? t.contactPage.submitting : t.contactPage.btnSubmit}</span>

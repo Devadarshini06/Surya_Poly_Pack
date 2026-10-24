@@ -191,7 +191,7 @@ export default function About() {
           </div>
           <Link
             to="/contact"
-            className="w-full sm:w-auto text-center shrink-0 px-6 py-3 rounded-xl bg-[#C8943D] text-[#0B201A] font-bold text-xs shadow-md hover:bg-[#DBB061] transition"
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#C8943D] text-[#0B201A] font-bold text-xs shadow-md hover:bg-[#DBB061] transition"
           >
             {t.nav.contact}
           </Link>

@@ -70,7 +70,7 @@ export default function Gallery() {
         data-section-ta="புகைப்பட தொகுப்பு"
         className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8"
       >
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2] scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2] scrollbar-none">
           {GALLERY_CATEGORIES.map(cat => (
             <button
               key={cat.id}

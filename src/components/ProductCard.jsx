@@ -144,18 +144,18 @@ export default function ProductCard({ product }) {
               </div>
             )}
 
-            <div className="pt-2 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-2 sm:gap-3">
+            <div className="pt-2 flex items-center justify-end gap-3">
               <button
                 type="button"
                 onClick={() => setModalOpen(false)}
-                className="w-full sm:w-auto text-center px-4 py-2.5 rounded-xl text-xs font-semibold text-[#3D4744] hover:bg-[#F3EFE6] cursor-pointer"
+                className="px-4 py-2 rounded-xl text-xs font-semibold text-[#3D4744] hover:bg-[#F3EFE6] cursor-pointer"
               >
                 {lang === 'ta' ? 'மூடு' : 'Close'}
               </button>
               <Link
                 to={`/contact?product=${product.id}`}
                 onClick={() => setModalOpen(false)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs font-bold shadow-xs border border-[#C8943D]/30 text-center"
+                className="inline-flex items-center gap-1.5 px-5 py-2 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs font-bold shadow-xs border border-[#C8943D]/30"
               >
                 <span>{t.productsPage.enquireButton}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#C8943D]" />

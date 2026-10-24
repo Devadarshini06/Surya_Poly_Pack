@@ -121,10 +121,10 @@ export default function Home() {
               </p>
 
               {/* Action Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
                 <Link
                   to="/products"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-[#0B2B22] hover:bg-[#102F26] text-white font-bold text-sm shadow-md shadow-[#0B2B22]/15 transition hover:shadow-lg active:scale-98 border border-[#C99A42]/30 text-center"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-[#0B2B22] hover:bg-[#102F26] text-white font-bold text-sm shadow-md shadow-[#0B2B22]/15 transition hover:shadow-lg active:scale-98 border border-[#C99A42]/30"
                 >
                   <span>{t.hero.btnExplore}</span>
                   <ArrowRight className="w-4 h-4 text-[#C99A42] shrink-0" />
@@ -132,7 +132,7 @@ export default function Home() {
 
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-white hover:bg-[#F1EBDD] text-[#0B2B22] border border-[#E4DED1] font-bold text-sm shadow-xs transition hover:border-[#0B2B22]/40 text-center"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-white hover:bg-[#F1EBDD] text-[#0B2B22] border border-[#E4DED1] font-bold text-sm shadow-xs transition hover:border-[#0B2B22]/40"
                 >
                   <span>{t.hero.btnContact}</span>
                 </Link>
@@ -498,16 +498,16 @@ export default function Home() {
               {t.cta.description}
             </p>
             
-            <div className="pt-3 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+            <div className="pt-3 flex flex-wrap items-center gap-3 sm:gap-4">
               <Link
                 to="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white text-[#0B2B22] font-bold text-sm shadow-md hover:bg-[#FAF8F2] transition active:scale-98 text-center"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white text-[#0B2B22] font-bold text-sm shadow-md hover:bg-[#FAF8F2] transition active:scale-98"
               >
                 <span>{t.cta.btnContact}</span>
                 <ArrowRight className="w-4 h-4 text-[#C99A42]" />
               </Link>
               
-              <div className="w-full sm:w-auto inline-flex flex-wrap items-center justify-center gap-2 px-4 sm:px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#25D366]/25 border border-white/20 select-none">
+              <div className="inline-flex flex-wrap items-center gap-2 px-4 sm:px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#25D366]/25 border border-white/20 select-none">
                 <a
                   href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
                   target="_blank"
