@@ -25,13 +25,13 @@ export default function WhatsAppButton() {
   return (
     <aside 
       aria-label="WhatsApp Contact" 
-      className="fixed bottom-6 right-6 z-40 select-none font-sans"
+      className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 select-none font-sans"
       ref={menuRef}
     >
       {/* 2-Number Selection Popover */}
       {open && (
         <div 
-          className="absolute bottom-16 right-0 mb-2 w-72 sm:w-80 bg-white/98 backdrop-blur-xl border border-[#E4DED1] rounded-2xl p-4 shadow-2xl text-[#27312D] animate-in fade-in slide-in-from-bottom-3 duration-150"
+          className="absolute bottom-16 right-0 mb-2 w-[calc(100vw-2rem)] max-w-xs sm:w-80 bg-white/98 backdrop-blur-xl border border-[#E4DED1] rounded-2xl p-4 shadow-2xl text-[#27312D] animate-in fade-in slide-in-from-bottom-3 duration-150"
           role="dialog"
           aria-label={lang === 'ta' ? 'வாட்ஸ்அப் எண்கள்' : 'WhatsApp Contacts'}
         >
@@ -118,9 +118,9 @@ export default function WhatsAppButton() {
         onClick={() => setOpen(!open)}
         aria-label="Chat with Surya Poly Pack on WhatsApp"
         aria-expanded={open}
-        className="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/35 hover:bg-[#20ba59] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer relative group"
+        className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/35 hover:bg-[#20ba59] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer relative group"
       >
-        <WhatsAppIcon className="w-7 h-7 text-white fill-white" />
+        <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white fill-white" />
         
         {/* Mini 2-number badge */}
         <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#0B2B22] text-[#FAF8F2] text-[10px] font-black flex items-center justify-center border-2 border-white shadow-xs">

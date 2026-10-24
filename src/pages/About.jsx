@@ -51,7 +51,7 @@ export default function About() {
         data-section-ta="எங்களைப் பற்றி கண்ணோட்டம்"
         className="max-w-7xl mx-auto px-4 sm:px-8"
       >
-        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] relative overflow-hidden">
+        <div className="bg-[#F3EFE6] rounded-3xl p-6 sm:p-14 border border-[#E2DDD2] relative overflow-hidden">
           <SectionHeading
             badge={t.aboutPage.badge}
             title={t.aboutPage.title}
@@ -97,7 +97,7 @@ export default function About() {
               <img
                 src="/images/factory.jpg"
                 alt="Surya Poly Pack Facility & Plant Floor"
-                className="w-full h-80 object-cover"
+                className="w-full h-64 sm:h-80 object-cover"
               />
               <div className="p-5 bg-white space-y-1">
                 <div className="text-xs font-bold text-[#0E2922]">Flexible Packaging Conversion Operations</div>
@@ -180,7 +180,7 @@ export default function About() {
         data-section-ta="ஆர்டர் விவாதம்"
         className="max-w-7xl mx-auto px-4 sm:px-8"
       >
-        <div className="rounded-3xl bg-gradient-to-br from-[#0E2922] via-[#163D32] to-[#0B201A] border border-[#C8943D]/30 text-white p-8 sm:p-12 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="rounded-3xl bg-gradient-to-br from-[#0E2922] via-[#163D32] to-[#0B201A] border border-[#C8943D]/30 text-white p-6 sm:p-12 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="space-y-2">
             <h3 className="text-2xl font-extrabold font-['Outfit',sans-serif] text-[#FAF8F3]">
               {lang === 'ta' ? 'உங்கள் பேக்கேஜிங் தேவையை விவாதிக்கலாம்' : 'Discuss Your Custom Packaging Order'}
@@ -191,7 +191,7 @@ export default function About() {
           </div>
           <Link
             to="/contact"
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#C8943D] text-[#0B201A] font-bold text-xs shadow-md hover:bg-[#DBB061] transition"
+            className="w-full sm:w-auto text-center shrink-0 px-6 py-3 rounded-xl bg-[#C8943D] text-[#0B201A] font-bold text-xs shadow-md hover:bg-[#DBB061] transition"
           >
             {t.nav.contact}
           </Link>

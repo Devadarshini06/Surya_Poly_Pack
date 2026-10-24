@@ -109,8 +109,8 @@ export default function Home() {
 
               <h1 className={`hero-title font-extrabold text-[#0B2B22] font-['Outfit',sans-serif] ${
                 lang === 'ta' 
-                  ? 'text-3xl sm:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] leading-[1.28]' 
-                  : 'text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.1rem] leading-[1.22]'
+                  ? 'text-2xl sm:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] leading-[1.28]' 
+                  : 'text-2xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.1rem] leading-[1.22]'
               }`}>
                 <span className="block sm:whitespace-nowrap">{t.hero.headlineLine1 || "Packaging That Protects."}</span>
                 <span className="block mt-1 sm:mt-1.5 sm:whitespace-nowrap">{t.hero.headlineLine2 || "Printing That Stands Out."}</span>
@@ -121,10 +121,10 @@ export default function Home() {
               </p>
 
               {/* Action Buttons */}
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
                 <Link
                   to="/products"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 min-h-[48px] rounded-xl bg-[#0B2B22] hover:bg-[#102F26] text-white font-bold text-sm shadow-md shadow-[#0B2B22]/15 transition hover:shadow-lg active:scale-98 border border-[#C99A42]/30 whitespace-nowrap"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-[#0B2B22] hover:bg-[#102F26] text-white font-bold text-sm shadow-md shadow-[#0B2B22]/15 transition hover:shadow-lg active:scale-98 border border-[#C99A42]/30 text-center"
                 >
                   <span>{t.hero.btnExplore}</span>
                   <ArrowRight className="w-4 h-4 text-[#C99A42] shrink-0" />
@@ -132,7 +132,7 @@ export default function Home() {
 
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 min-h-[48px] rounded-xl bg-white hover:bg-[#F1EBDD] text-[#0B2B22] border border-[#E4DED1] font-bold text-sm shadow-xs transition hover:border-[#0B2B22]/40 whitespace-nowrap"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 min-h-[48px] rounded-xl bg-white hover:bg-[#F1EBDD] text-[#0B2B22] border border-[#E4DED1] font-bold text-sm shadow-xs transition hover:border-[#0B2B22]/40 text-center"
                 >
                   <span>{t.hero.btnContact}</span>
                 </Link>
@@ -166,8 +166,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                   {/* Floating Overlay Badge */}
-                  <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 border border-[#E4DED1] shadow-lg flex items-center gap-3.5">
-                    <div className="w-11 h-11 rounded-xl bg-[#0B2B22] text-[#C99A42] flex items-center justify-center shrink-0 border border-[#C99A42]/30">
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-[#E4DED1] shadow-lg flex items-center gap-3">
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#0B2B22] text-[#C99A42] flex items-center justify-center shrink-0 border border-[#C99A42]/30">
                       <Factory className="w-5 h-5 text-[#C99A42]" />
                     </div>
                     <div className="min-w-0">
@@ -191,7 +191,7 @@ export default function Home() {
         data-section-ta="எங்களைப் பற்றி"
         className="max-w-[1400px] mx-auto px-4 sm:px-8"
       >
-        <div className="bg-white rounded-3xl border border-[#E4DED1] p-8 sm:p-12 shadow-sm">
+        <div className="bg-white rounded-3xl border border-[#E4DED1] p-5 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-7 space-y-5">
@@ -489,7 +489,7 @@ export default function Home() {
         data-section-ta="தொடர்புக்கு & விசாரணை"
         className="max-w-[1400px] mx-auto px-4 sm:px-8"
       >
-        <div className="rounded-3xl bg-gradient-to-br from-[#0B2B22] via-[#102F26] to-[#071E18] text-white p-8 sm:p-14 shadow-xl relative overflow-hidden border border-[#C99A42]/30">
+        <div className="rounded-3xl bg-gradient-to-br from-[#0B2B22] via-[#102F26] to-[#071E18] text-white p-6 sm:p-14 shadow-xl relative overflow-hidden border border-[#C99A42]/30">
           <div className="relative z-10 max-w-2xl space-y-5">
             <h2 className="text-2xl sm:text-4xl font-extrabold font-['Outfit',sans-serif] tracking-tight text-white">
               {t.cta.title}
@@ -498,16 +498,16 @@ export default function Home() {
               {t.cta.description}
             </p>
             
-            <div className="pt-3 flex flex-wrap items-center gap-4">
+            <div className="pt-3 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-[#0B2B22] font-bold text-sm shadow-md hover:bg-[#FAF8F2] transition active:scale-98"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white text-[#0B2B22] font-bold text-sm shadow-md hover:bg-[#FAF8F2] transition active:scale-98 text-center"
               >
                 <span>{t.cta.btnContact}</span>
                 <ArrowRight className="w-4 h-4 text-[#C99A42]" />
               </Link>
               
-              <div className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-md shadow-[#25D366]/25 border border-white/20 select-none">
+              <div className="w-full sm:w-auto inline-flex flex-wrap items-center justify-center gap-2 px-4 sm:px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#25D366]/25 border border-white/20 select-none">
                 <a
                   href={getWhatsAppUrl(null, lang, COMPANY_INFO.phone.primaryRaw)}
                   target="_blank"

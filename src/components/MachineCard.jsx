@@ -34,7 +34,7 @@ export default function MachineCard({ machine }) {
         </div>
 
         {/* Machine Content */}
-        <div className="p-6 space-y-4">
+        <div className="p-5 sm:p-6 space-y-4">
           <div>
             <div className="text-[11px] uppercase tracking-wider font-bold text-[#C8943D] mb-1">
               {machine.shortName}
@@ -62,7 +62,7 @@ export default function MachineCard({ machine }) {
       </div>
 
       {/* Verification Flag Box */}
-      <div className="p-6 pt-0">
+      <div className="p-5 sm:p-6 pt-0">
         <div className="p-3.5 rounded-xl bg-[#F3EFE6] border border-[#E2DDD2] flex items-start gap-2.5">
           <AlertTriangle className="w-4 h-4 text-[#C8943D] shrink-0 mt-0.5" />
           <p className="text-[11px] text-[#3D4744] leading-relaxed">

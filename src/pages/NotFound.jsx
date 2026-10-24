@@ -14,7 +14,7 @@ export default function NotFound() {
         description={t.notFound.description}
       />
       
-      <div className="max-w-md w-full text-center space-y-6 bg-white p-8 sm:p-12 rounded-3xl border border-[#E2DDD2] shadow-sm">
+      <div className="max-w-md w-full text-center space-y-6 bg-white p-6 sm:p-12 rounded-3xl border border-[#E2DDD2] shadow-sm">
         <div className="w-20 h-20 rounded-2xl bg-[#0E2922]/10 text-[#0E2922] font-black text-3xl flex items-center justify-center mx-auto border border-[#C8943D]/20">
           404
         </div>

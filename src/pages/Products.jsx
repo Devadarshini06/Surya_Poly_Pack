@@ -62,7 +62,7 @@ export default function Products() {
         data-section-ta="தயாரிப்பு கண்ணோட்டம்"
         className="max-w-7xl mx-auto px-4 sm:px-8"
       >
-        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2]">
+        <div className="bg-[#F3EFE6] rounded-3xl p-6 sm:p-14 border border-[#E2DDD2]">
           <SectionHeading
             badge={t.productsPage.badge}
             title={t.productsPage.title}
@@ -89,7 +89,7 @@ export default function Products() {
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
           
           {/* Category Filter Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
             {PRODUCT_CATEGORIES.map(cat => (
               <button
                 key={cat.id}
@@ -106,7 +106,7 @@ export default function Products() {
           </div>
 
           {/* Search Input */}
-          <div className="relative min-w-[280px]">
+          <div className="relative w-full md:w-auto md:min-w-[280px]">
             <Search className="w-4 h-4 text-[#3D4744] absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"

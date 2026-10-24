@@ -35,7 +35,7 @@ export default function Machinery() {
         data-section-ta="இயந்திரங்கள் கண்ணோட்டம்"
         className="max-w-7xl mx-auto px-4 sm:px-8"
       >
-        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-6">
+        <div className="bg-[#F3EFE6] rounded-3xl p-6 sm:p-14 border border-[#E2DDD2] space-y-6">
           <SectionHeading
             badge={t.machineryPage.badge}
             title={t.machineryPage.title}
@@ -64,7 +64,7 @@ export default function Machinery() {
         data-section-ta="இயந்திரங்கள் பட்டியல்"
         className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8"
       >
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2]">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2] scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
           {categories.map(cat => (
             <button
               key={cat.id}
@@ -137,7 +137,7 @@ export default function Machinery() {
         data-section-ta="மூலப்பொருள் செயலாக்கம்"
         className="max-w-7xl mx-auto px-4 sm:px-8"
       >
-        <div className="bg-white rounded-3xl border border-[#E2DDD2] p-8 sm:p-12 shadow-sm space-y-6">
+        <div className="bg-white rounded-3xl border border-[#E2DDD2] p-6 sm:p-12 shadow-sm space-y-6">
           <SectionHeading
             badge={lang === 'ta' ? 'மூலப்பொருள் செயலாக்கம்' : 'Polymer Substrates'}
             title={t.machineryPage.filmConversionHeading}

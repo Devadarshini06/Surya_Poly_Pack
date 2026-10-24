@@ -135,13 +135,13 @@ export default function Header() {
     <>
       {/* Top Corporate Strip - Single Ultra-Clean Line */}
       <div className="w-full bg-[#0B2B22] text-[#FAF8F2] text-xs py-2 border-b border-[#102F26]/60 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 flex items-center justify-between gap-4 flex-nowrap whitespace-nowrap">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-8 flex items-center justify-between gap-2 sm:gap-4 flex-nowrap whitespace-nowrap">
           
           {/* Left: Brand Subtitle & Location */}
-          <div className="flex items-center gap-3 text-[11px] sm:text-xs shrink-0">
-            <span className="flex items-center gap-1.5 font-medium text-[#FAF8F2]">
-              <span className="w-2 h-2 rounded-full bg-[#C99A42] animate-pulse"></span>
-              <span>{t.brandSubtitle}</span>
+          <div className="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs shrink min-w-0">
+            <span className="flex items-center gap-1.5 font-medium text-[#FAF8F2] truncate max-w-[160px] xs:max-w-[240px] sm:max-w-none">
+              <span className="w-2 h-2 rounded-full bg-[#C99A42] animate-pulse shrink-0"></span>
+              <span className="truncate">{t.brandSubtitle}</span>
             </span>
             <span className="hidden lg:inline text-white/20">|</span>
             <span className="hidden lg:flex items-center gap-1 text-[#FAF8F2]/80">
@@ -151,7 +151,7 @@ export default function Header() {
           </div>
 
           {/* Right: Phone Numbers, WhatsApp, Email & Language Switcher */}
-          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs shrink-0">
+          <div className="flex items-center gap-2 sm:gap-4 text-[11px] sm:text-xs shrink-0">
             {/* Phone Call: Phone Symbol and 2 Numbers */}
             <div className="flex items-center gap-1.5 font-medium">
               <Phone className="w-3.5 h-3.5 text-[#C99A42] shrink-0" />
@@ -220,8 +220,8 @@ export default function Header() {
       <header
         className={`sticky top-0 z-40 transition-all duration-200 w-full ${
           scrolled
-            ? 'glass-nav border-b border-[#E4DED1] shadow-xs py-2.5'
-            : 'bg-[#FAF8F2] border-b border-[#E4DED1] py-3'
+            ? 'glass-nav border-b border-[#E4DED1] shadow-xs py-2 sm:py-2.5'
+            : 'bg-[#FAF8F2] border-b border-[#E4DED1] py-2 sm:py-3'
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 flex items-center justify-between">
@@ -235,7 +235,7 @@ export default function Header() {
             <img
               src={COMPANY_INFO.logo}
               alt="Surya Poly Pack Logo"
-              className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+              className="h-10 sm:h-14 w-auto object-contain transition-transform group-hover:scale-[1.02]"
             />
           </Link>
 
@@ -289,7 +289,7 @@ export default function Header() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-[#E4DED1] bg-[#FAF8F2] shadow-xl px-4 py-5 animate-in slide-in-from-top-2 duration-150">
+          <div className="lg:hidden border-t border-[#E4DED1] bg-[#FAF8F2] shadow-xl px-4 py-5 animate-in slide-in-from-top-2 duration-150 max-h-[calc(100dvh-5rem)] overflow-y-auto">
             <nav className="flex flex-col gap-1.5">
               {navLinks.map((item) => {
                 const isActive = activeNavPath === item.path;

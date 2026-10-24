@@ -110,7 +110,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-[#E2DDD2] p-6 sm:p-10 shadow-lg shadow-[#0E2922]/5">
+    <div className="bg-white rounded-3xl border border-[#E2DDD2] p-5 sm:p-10 shadow-lg shadow-[#0E2922]/5">
       {/* Form Header */}
       <div className="space-y-2 mb-8">
         <h3 className="text-2xl font-extrabold text-[#0E2922] font-['Outfit',sans-serif]">
@@ -169,11 +169,11 @@ export default function EnquiryForm({ initialProductId = '' }) {
             </div>
           )}
 
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0E2922] text-[#FAF8F3] text-xs font-bold shadow-md hover:bg-[#1C473A] transition cursor-pointer border border-[#C8943D]/30"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#0E2922] text-[#FAF8F3] text-xs font-bold shadow-md hover:bg-[#1C473A] transition cursor-pointer border border-[#C8943D]/30 text-center"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>{t.contactPage.btnDismiss}</span>
@@ -182,7 +182,7 @@ export default function EnquiryForm({ initialProductId = '' }) {
               href={getWhatsAppUrl(`Hello Surya Poly Pack, I submitted an enquiry for ${submittedData?.product || 'packaging'}.`, lang)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-md hover:bg-[#20ba59] transition"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-md hover:bg-[#20ba59] transition text-center"
             >
               <WhatsAppIcon className="w-3.5 h-3.5 text-white fill-white" />
               <span>WhatsApp Direct</span>

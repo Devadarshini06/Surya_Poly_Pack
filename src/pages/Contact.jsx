@@ -37,7 +37,7 @@ export default function Contact() {
         data-section-ta="தொடர்பு கண்ணோட்டம்"
         className="max-w-7xl mx-auto px-4 sm:px-8"
       >
-        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-4">
+        <div className="bg-[#F3EFE6] rounded-3xl p-6 sm:p-14 border border-[#E2DDD2] space-y-4">
           <SectionHeading
             badge={t.contactPage.badge}
             title={t.contactPage.title}
@@ -58,7 +58,7 @@ export default function Contact() {
           {/* Left Column: Contact Cards & Info */}
           <div className="lg:col-span-5 space-y-6">
             
-            <div className="bg-white rounded-3xl border border-[#E2DDD2] p-6 sm:p-8 space-y-6 shadow-sm">
+            <div className="bg-white rounded-3xl border border-[#E2DDD2] p-5 sm:p-8 space-y-6 shadow-sm">
               <h3 className="text-xl font-extrabold text-[#0E2922] font-['Outfit',sans-serif]">
                 {t.contactPage.infoHeading}
               </h3>

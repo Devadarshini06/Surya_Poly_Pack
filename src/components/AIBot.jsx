@@ -189,19 +189,19 @@ export default function AIBot() {
   return (
     <>
       {/* Floating AI Bot Launcher Trigger */}
-      <div className="fixed bottom-24 right-6 z-40 select-none font-sans">
+      <div className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 z-40 select-none font-sans">
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Open Surya Poly Pack AI Assistant"
           aria-expanded={isOpen}
-          className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#0B2B22] via-[#102F26] to-[#071E18] text-[#FAF8F2] shadow-xl shadow-[#0B2B22]/35 border-2 border-[#C99A42] hover:border-[#DBAE56] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer relative group"
+          className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#0B2B22] via-[#102F26] to-[#071E18] text-[#FAF8F2] shadow-xl shadow-[#0B2B22]/35 border-2 border-[#C99A42] hover:border-[#DBAE56] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer relative group"
         >
           {isOpen ? (
-            <X className="w-6 h-6 text-[#FAF8F2]" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF8F2]" />
           ) : (
             <>
-              <Bot className="w-7 h-7 text-[#C99A42] group-hover:rotate-6 transition-transform" />
+              <Bot className="w-6 h-6 sm:w-7 sm:h-7 text-[#C99A42] group-hover:rotate-6 transition-transform" />
               
               {/* Pulsing AI Activity Sparkle */}
               <span className="absolute -top-1 -left-1 flex h-4 w-4">
@@ -232,7 +232,7 @@ export default function AIBot() {
       {isOpen && (
         <aside 
           aria-label="Surya Poly Pack AI Chat Assistant"
-          className="fixed bottom-6 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[420px] h-[580px] max-h-[85vh] bg-[#FAF8F2] border border-[#E4DED1] rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 font-sans"
+          className="fixed inset-x-3 sm:inset-x-auto bottom-3 sm:bottom-6 sm:right-6 z-50 w-auto sm:w-[420px] max-w-[calc(100vw-1.5rem)] sm:max-w-[420px] h-[540px] sm:h-[580px] max-h-[85vh] bg-[#FAF8F2] border border-[#E4DED1] rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 font-sans"
         >
           {/* Header Bar */}
           <div className="bg-[#0B2B22] text-[#FAF8F2] p-3.5 sm:p-4 flex items-center justify-between border-b border-[#C99A42]/30 shrink-0">
@@ -309,15 +309,15 @@ export default function AIBot() {
                 </div>
 
                 {/* Big Choice Cards */}
-                <div className="grid grid-cols-2 gap-3 pt-1">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-1">
                   <button
                     type="button"
                     onClick={() => handleSelectLanguage('en')}
-                    className="p-4 rounded-2xl bg-white hover:bg-[#F1EBDD] border-2 border-[#E4DED1] hover:border-[#0B2B22] transition-all text-left group shadow-xs cursor-pointer flex flex-col justify-between h-28"
+                    className="p-3 sm:p-4 rounded-2xl bg-white hover:bg-[#F1EBDD] border-2 border-[#E4DED1] hover:border-[#0B2B22] transition-all text-left group shadow-xs cursor-pointer flex flex-col justify-between h-24 sm:h-28"
                   >
                     <div>
-                      <div className="text-xl mb-1">🇬🇧</div>
-                      <div className="text-sm font-extrabold text-[#0B2B22] group-hover:text-[#0B2B22]">
+                      <div className="text-lg sm:text-xl mb-0.5 sm:mb-1">🇬🇧</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-[#0B2B22] group-hover:text-[#0B2B22]">
                         English
                       </div>
                     </div>
@@ -330,11 +330,11 @@ export default function AIBot() {
                   <button
                     type="button"
                     onClick={() => handleSelectLanguage('ta')}
-                    className="p-4 rounded-2xl bg-white hover:bg-[#F1EBDD] border-2 border-[#E4DED1] hover:border-[#0B2B22] transition-all text-left group shadow-xs cursor-pointer flex flex-col justify-between h-28"
+                    className="p-3 sm:p-4 rounded-2xl bg-white hover:bg-[#F1EBDD] border-2 border-[#E4DED1] hover:border-[#0B2B22] transition-all text-left group shadow-xs cursor-pointer flex flex-col justify-between h-24 sm:h-28"
                   >
                     <div>
-                      <div className="text-xl mb-1">🇮🇳</div>
-                      <div className="text-sm font-extrabold text-[#0B2B22] group-hover:text-[#0B2B22]">
+                      <div className="text-lg sm:text-xl mb-0.5 sm:mb-1">🇮🇳</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-[#0B2B22] group-hover:text-[#0B2B22]">
                         தமிழ் (Tamil)
                       </div>
                     </div>

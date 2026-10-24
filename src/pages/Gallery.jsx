@@ -51,7 +51,7 @@ export default function Gallery() {
         data-section-ta="புகைப்படங்கள் கண்ணோட்டம்"
         className="max-w-7xl mx-auto px-4 sm:px-8"
       >
-        <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-14 border border-[#E2DDD2] space-y-4">
+        <div className="bg-[#F3EFE6] rounded-3xl p-6 sm:p-14 border border-[#E2DDD2] space-y-4">
           <SectionHeading
             badge={t.galleryPage.badge}
             title={t.galleryPage.title}
@@ -70,7 +70,7 @@ export default function Gallery() {
         data-section-ta="புகைப்பட தொகுப்பு"
         className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8"
       >
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2]">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#E2DDD2] scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
           {GALLERY_CATEGORIES.map(cat => (
             <button
               key={cat.id}
@@ -156,19 +156,19 @@ export default function Gallery() {
           {/* Left Arrow */}
           <button
             onClick={() => setActiveLightboxIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition hidden sm:flex items-center justify-center cursor-pointer"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 rounded-full bg-white/20 sm:bg-white/10 hover:bg-white/30 text-white transition flex items-center justify-center cursor-pointer z-10"
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Right Arrow */}
           <button
             onClick={() => setActiveLightboxIndex((prev) => (prev + 1) % filteredItems.length)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition hidden sm:flex items-center justify-center cursor-pointer"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 rounded-full bg-white/20 sm:bg-white/10 hover:bg-white/30 text-white transition flex items-center justify-center cursor-pointer z-10"
             aria-label="Next image"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Main Content */}

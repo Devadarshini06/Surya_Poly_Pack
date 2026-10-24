@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
         
         {/* Main 4-column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 border-b border-white/10">
           
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
@@ -177,7 +177,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F3EFE6]/60 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F3EFE6]/60 gap-4 text-center sm:text-left">
           <p>© {new Date().getFullYear()} {t.footer.copyright}</p>
           <div className="flex items-center gap-4">
             <button

@@ -87,9 +87,9 @@ export default function ProductCard({ product }) {
 
       {/* Technical Detail Modal */}
       {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
           <div 
-            className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-[#E2DDD2] relative max-h-[90vh] overflow-y-auto space-y-5"
+            className="bg-white rounded-2xl max-w-lg w-full p-4 sm:p-6 shadow-2xl border border-[#E2DDD2] relative max-h-[90vh] overflow-y-auto space-y-4 sm:space-y-5"
             role="dialog"
             aria-modal="true"
           >
@@ -144,18 +144,18 @@ export default function ProductCard({ product }) {
               </div>
             )}
 
-            <div className="pt-2 flex items-center justify-end gap-3">
+            <div className="pt-2 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-2 sm:gap-3">
               <button
                 type="button"
                 onClick={() => setModalOpen(false)}
-                className="px-4 py-2 rounded-xl text-xs font-semibold text-[#3D4744] hover:bg-[#F3EFE6] cursor-pointer"
+                className="w-full sm:w-auto text-center px-4 py-2.5 rounded-xl text-xs font-semibold text-[#3D4744] hover:bg-[#F3EFE6] cursor-pointer"
               >
                 {lang === 'ta' ? 'மூடு' : 'Close'}
               </button>
               <Link
                 to={`/contact?product=${product.id}`}
                 onClick={() => setModalOpen(false)}
-                className="inline-flex items-center gap-1.5 px-5 py-2 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs font-bold shadow-xs border border-[#C8943D]/30"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0E2922] hover:bg-[#1C473A] text-[#FAF8F3] text-xs font-bold shadow-xs border border-[#C8943D]/30 text-center"
               >
                 <span>{t.productsPage.enquireButton}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#C8943D]" />
